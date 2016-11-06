@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Accordion, List } from 'antd-mobile';
 
+import './public.css'
+
 //更多
 export default class More extends React.Component{
 	constructor(props) {
@@ -11,7 +13,7 @@ export default class More extends React.Component{
     render(){
 
     	return(
-    		<div style={{ marginTop: 10, marginBottom: 10 }}>
+    		<div className='more'>
 		        <Accordion
 		          defaultActiveKey="0"
 		          accordion
@@ -23,9 +25,6 @@ export default class More extends React.Component{
 		            	  </a>
 		              </List.Item>
 		          </Accordion.Panel>
-		          <Accordion.Panel header="我的邮箱">
-		          	  <List.Item>kameleon@126.com</List.Item>
-		          </Accordion.Panel>
 		          <Accordion.Panel header="我的Github">
 			          <List.Item>
 				          <a href="https://github.com/xueenze">
@@ -33,12 +32,19 @@ export default class More extends React.Component{
 				          </a>
 			          </List.Item>
 		          </Accordion.Panel>
-		          <Accordion.Panel header="我自己的公众号哦">
+		          <Accordion.Panel header="我的邮箱">
+		          	  <List.Item>kameleon@126.com</List.Item>
+		          </Accordion.Panel>
+		          <Accordion.Panel header="我的微信">
 		          	  <List.Item>
-		          	  　　　　<a>
-		          	  		  <img src="http://h.hiphotos.baidu.com/image/pic/item/3bf33a87e950352a5936aa0a5543fbf2b2118b59.jpg" style={{ width: '450px',height: '450px' }}></img>
-		          	  		  <span>123123</span>
-		          	  	  </a>
+		          	      <img src={require('../../public/images/more2.png')} 
+		          	      	style={{width:'500px',height:'500px'}}></img>
+		          	  </List.Item>
+		          </Accordion.Panel>
+		          <Accordion.Panel header="我自己的公众号哦（快快关注我！）">
+		          	  <List.Item>
+		          	      <img src={require('../../public/images/more1.png')} 
+		          	      	style={{width:'500px',height:'500px'}}></img>
 		          	  </List.Item>
 		          </Accordion.Panel>
 		        </Accordion>

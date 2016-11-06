@@ -2,6 +2,9 @@ import React from 'react';
 
 import {Card,WingBlank,WhiteSpace} from 'antd-mobile'
 
+import '../../public/images/experience1.png'
+import '../../public/images/experience2.png'
+
 import './public.css'
 
 //经验卡片
@@ -19,7 +22,7 @@ export default class Experience extends React.Component{
                 <Card>
                     <Card.Header
                         title="应用开发（在职）"
-                        thumb="https://cloud.githubusercontent.com/assets/1698185/18039916/f025c090-6dd9-11e6-9d86-a4d48a1bf049.png"
+                        thumb="images/experience1.png"
                         extra={<span>腾讯科技有限公司</span>}
                     />
                     <Card.Body>
@@ -35,7 +38,7 @@ export default class Experience extends React.Component{
                     <Card>
                       <Card.Header
                         title="云开发（实习）"
-                        thumb="https://cloud.githubusercontent.com/assets/1698185/18039916/f025c090-6dd9-11e6-9d86-a4d48a1bf049.png"
+                        thumb="images/experience2.png"
                         extra={<span>SAP</span>}
                       />
                       <Card.Body>
@@ -51,7 +54,7 @@ export default class Experience extends React.Component{
                     <Card>
                       <Card.Header
                         title="应用开发（实习）"
-                        thumb="https://cloud.githubusercontent.com/assets/1698185/18039916/f025c090-6dd9-11e6-9d86-a4d48a1bf049.png"
+                        thumb="images/experience1.png"
                         extra={<span>腾讯科技有限公司</span>}
                       />
                       <Card.Body>

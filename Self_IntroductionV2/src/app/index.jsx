@@ -12,25 +12,36 @@ import Experience from './experience.jsx';
 import Life from './life.jsx';
 import More from './more.jsx';
 
+import './public.css'
 
 //渲染页面
 ReactDOM.render((
-  <div style={{height:'20%'}}>
-    <Tabs defaultActiveKey="3">
+  <div className="main">
+    <Tabs defaultActiveKey="1">
         <TabPane tab="我" key="1">
-          <PersonalInfo/>
+          <div className="mytab">
+            <PersonalInfo/>
+          </div>
         </TabPane>
         <TabPane tab="技能" key="2">
-          <Skills/>
+          <div className="mytab">
+            <Skills/>
+          </div>
         </TabPane>
         <TabPane tab="经历" key="3">
-          <Experience/>
+          <div className="mytab">
+            <Experience/>
+          </div>
         </TabPane>
         <TabPane tab="生活" key="4">
-          <Life/>
+          <div className="mytab">
+            <Life/>
+          </div>
         </TabPane>
         <TabPane tab="更多的我" key="5">
-          <More/>
+          <div className="mytab">
+            <More/>
+          </div>
         </TabPane>
       </Tabs>
   </div>

@@ -1,8 +1,8 @@
 {
-  "name": "react-antd-mobile-demo",
-  "version": "1.0.0",
-  "description": "React Antd Mobile Demo",
-  "author": "jiangxy <foolbeargm@gmail.com>",
+  "name": "SelfV2",
+  "version": "2.0.0",
+  "description": "SelfV2",
+  "author": "enzexue",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=5.0 <7",
@@ -47,8 +47,8 @@
   },
   "scripts": {
     "build": "webpack --progress --colors --display-error-details",
-    "prod": "NODE_ENV=production webpack --progress --colors --config webpack.config.prod.js -p --display-error-details",
-    "clean": "rm dist/bundle*",
+    "prod": "webpack --progress --colors --config webpack.config.prod.js -p --display-error-details",
+    "clean": "rm dist/*",
     "dev": "webpack-dev-server --devtool eval --progress --colors --content-base dist --hot --inline --display-error-details",
     "eslint": "eslint --ext .js,.jsx src",
     "stylelint": "stylelint \"src/**/*.css\"",

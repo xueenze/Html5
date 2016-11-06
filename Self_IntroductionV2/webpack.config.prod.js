@@ -1,13 +1,14 @@
 const webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/index.js',
+    './src/app/index.jsx',
   ],
 
   output: {
     path: __dirname + '/dist',
-    filename: 'bundle.min.js',
+    filename: 'js/[name].build.js',
   },
 
   resolve: {
@@ -33,7 +34,7 @@ module.exports = {
         loader: 'style!css!less',
       }, {
         test: /\.(png|jpg|svg)$/,
-        loader: 'url?limit=25000',
+        loader: 'url?limit=25000&name=images/[name].[ext]',
       },
     ],
   },
@@ -47,9 +48,12 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      __DEV__: JSON.stringify(JSON.parse(process.env.NODE_ENV === 'production' ? 'false' : 'true')),
-    }),
+
+    new HtmlWebpackPlugin({
+          filename: 'index.html',
+          template: './src/index.html',
+          chunk:['main'],
+          inject: 'body'
+      })
   ],
 };

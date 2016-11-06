@@ -1,6 +1,16 @@
 html{
     line-height: normal;
-    font-family:  PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif;
+    font-family:"微软雅黑";
+}
+
+.main{
+   background-image:url('../../public/images/floor.jpg');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+.mytab{
+  height:92%;
 }
 
 /* Meters */
@@ -110,11 +120,34 @@ html{
   background-color: #7f8c8d;
 }
 
-.tag-container > ul{
+.personalinfo{
+
+}
+
+.personalinfo .selfinfo{
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1.2em;
+  background-color: #b7b3b3;
+  color: white;
+  padding: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+
+}
+
+.personalinfo > .container:after {
+ content: "";
+ display: block;
+ clear: both;
+}
+
+.personalinfo > .container .tag-container > ul{
     list-style: none;
 }
 
-.tag-container > ul > li {
+.personalinfo > .container .tag-container > ul > li {
   color: #fff;
   font-size: 1.3em;
   text-align: center;
@@ -122,19 +155,18 @@ html{
   font-weight: 700;
   background-color: rgba(65, 139, 202, 0.64);
   padding: 0.4em 1em;
+  border-radius: 50px;
   font-family: Nunito-Regular;
-}
-
-.container:after {
- content: "";
- display: block;
- clear: both;
 }
 
 .skill{
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 50px;
+
 }
 
 .skill > .title{
@@ -146,6 +178,22 @@ html{
 
 }
 
+.more{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* 库中的CSS类名 */
+.am-card-header-content img{
+  width:100px;
+  flex:none !important;
+}
+
 .am-card-body{
     flex:none !important;
+}
+
+.am-grid .am-flexbox{
+  background: none !important;
 }

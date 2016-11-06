@@ -40,7 +40,7 @@ module.exports = {
         loader: 'style!css!less',
       }, {
         test: /\.(png|jpg|svg)$/,
-        loader: 'url?limit=25000',
+        loader: 'url?limit=25000&name=images/[name].[ext]',
       },
     ],
   },
