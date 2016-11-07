@@ -57,7 +57,7 @@ export default class Life extends React.Component{
                     columnNum={1}
                     hasLine={false}
                     renderItem={(dataItem, index) => (
-                      <div style={{ margin: '16px', background: '#f7f7f7', textAlign: 'center' }}>
+                      <div style={{ margin: '16px', background: '#f7f7f7', textAlign: 'center' }}  className="animated slideInUp">
                         <div style={{ background: 'rgba(0, 0, 0, 0.1)', padding: '8px' }}>
                           <span>{index + 1}.{dataItem.text}</span>
                         </div>

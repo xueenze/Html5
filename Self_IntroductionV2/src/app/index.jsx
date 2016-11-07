@@ -13,6 +13,7 @@ import Life from './life.jsx';
 import More from './more.jsx';
 
 import './public.css'
+import '../../public/css/animate.css'
 
 //渲染页面
 ReactDOM.render((

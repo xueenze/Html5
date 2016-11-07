@@ -17,7 +17,7 @@ export default class Experience extends React.Component{
 
     	return(
     		<div className="experience">
-            <WingBlank size="lg">
+            <WingBlank size="lg" className="animated slideInUp">
                 <WhiteSpace size="lg" />
                 <Card>
                     <Card.Header
@@ -33,7 +33,7 @@ export default class Experience extends React.Component{
                 </Card>
                 <WhiteSpace size="lg" />
             </WingBlank>
-            <WingBlank size="lg">
+            <WingBlank size="lg" className="animated slideInUp">
                 <WhiteSpace size="lg" />
                     <Card>
                       <Card.Header
@@ -49,7 +49,7 @@ export default class Experience extends React.Component{
                     </Card>
                 <WhiteSpace size="lg" />
             </WingBlank>
-            <WingBlank size="lg">
+            <WingBlank size="lg" className="animated slideInUp">
                 <WhiteSpace size="lg" />
                     <Card>
                       <Card.Header

@@ -11,7 +11,7 @@ export default class Skills extends React.Component{
     render(){
 
     	return(
-    		<div className="skill">
+    		<div className="skill animated swing">
                 <div className="title">Skills</div>
     			<div className="meter midnight">
                     <span style={{width: '80%'}}><span>JavaScript</span></span>

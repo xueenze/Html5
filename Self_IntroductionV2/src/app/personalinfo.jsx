@@ -2,6 +2,8 @@ import React from 'react';
 
 import './public.css'
 
+import '../../public/images/me.png'
+
 //个人信息
 export default class PersonalInfo extends React.Component{
 	constructor(props) {
@@ -14,21 +16,21 @@ export default class PersonalInfo extends React.Component{
     		<div className='personalinfo'>
 	    		<div className='container'>
 	    			<div style={{width:'40%',float:'left',margin:'20px'}}>
-	    				<img src={require('../../public/images/me.png')} style={{width:'100%'}}></img>
+	    				<img src={'/images/me.png'} style={{width:'100%'}}></img>
 	    			</div>
 	    			<div style={{width:'50%',float:'left'}}>
 	    				<div className="tag-container">
 	    					<ul>
-	    						<li>诚实</li>
-	    						<li>老实</li>
-	    						<li>踏实</li>
-	    						<li>厚实</li>
+	    						<li className="animated flipInX">诚实</li>
+	    						<li className="animated flipInX">老实</li>
+	    						<li className="animated flipInX">踏实</li>
+	    						<li className="animated flipInX">厚实</li>
 	    					</ul>
 	    				</div>
 	    			</div>
 	    		</div>
 	    		<div style={{clear:'both'}}>
-	    			<p className='selfinfo'>
+	    			<p className='selfinfo animated zoomIn'>
 	    				恩泽他毕业于四川大学软件学院软件工程专业，来自辽宁大连，
 	    				他是个地道的东北银， 大学本科期间，曾有将近两年的时间在外面打工，实习，工作，
 	    				蹉跎中练就一身生存技能， 工作期间接触过Android，JAVA WEB，.NET MVC等主流技术及部分流行的前端框架，
