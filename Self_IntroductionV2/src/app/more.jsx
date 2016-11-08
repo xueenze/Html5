@@ -40,13 +40,13 @@ export default class More extends React.Component{
 		          </Accordion.Panel>
 		          <Accordion.Panel header="我的微信" className="animated slideInUp">
 		          	  <List.Item>
-		          	      <img src={'/images/more2.png'} 
+		          	      <img src={'images/more2.png'} 
 		          	      	style={{width:'500px',height:'500px'}}></img>
 		          	  </List.Item>
 		          </Accordion.Panel>
 		          <Accordion.Panel header="我自己的公众号哦（快快关注我！）" className="animated slideInUp">
 		          	  <List.Item>
-		          	      <img src={'/images/more1.png'} 
+		          	      <img src={'images/more1.png'} 
 		          	      	style={{width:'500px',height:'500px'}}></img>
 		          	  </List.Item>
 		          </Accordion.Panel>

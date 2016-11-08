@@ -16,7 +16,7 @@ export default class PersonalInfo extends React.Component{
     		<div className='personalinfo'>
 	    		<div className='container'>
 	    			<div style={{width:'40%',float:'left',margin:'20px'}}>
-	    				<img src={'/images/me.png'} style={{width:'100%'}}></img>
+	    				<img src={'images/me.png'} style={{width:'100%'}}></img>
 	    			</div>
 	    			<div style={{width:'50%',float:'left'}}>
 	    				<div className="tag-container">

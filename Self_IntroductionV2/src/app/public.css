@@ -197,3 +197,8 @@ html{
 .am-grid .am-flexbox{
   background: none !important;
 }
+
+.am-tabs-bar .am-tabs-tab{
+  line-height: 100px;
+  height: 100px;
+}
