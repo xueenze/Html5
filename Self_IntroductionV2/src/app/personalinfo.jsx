@@ -31,7 +31,7 @@ export default class PersonalInfo extends React.Component{
 	    		</div>
 	    		<div style={{clear:'both'}}>
 	    			<p className='selfinfo animated zoomIn'>
-	    				恩泽他毕业于四川大学软件学院软件工程专业，来自辽宁大连，
+	    				锤子他毕业于四川大学软件学院软件工程专业，来自辽宁大连，
 	    				他是个地道的东北银， 大学本科期间，曾有将近两年的时间在外面打工，实习，工作，
 	    				蹉跎中练就一身生存技能， 工作期间接触过Android，JAVA WEB，.NET MVC等主流技术及部分流行的前端框架，
 	    				虽不能说见多识广，但至少还算是在匍匐中成长。 没啥远大抱负，也不会想有朝一日征服互联网的圈子，

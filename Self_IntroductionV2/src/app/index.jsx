@@ -9,7 +9,6 @@ const TabPane = Tabs.TabPane;
 import PersonalInfo from './personalinfo.jsx';
 import Skills from './skills.jsx';
 import Experience from './experience.jsx';
-import Life from './life.jsx';
 import More from './more.jsx';
 
 import './public.css'
@@ -34,12 +33,7 @@ ReactDOM.render((
             <Experience/>
           </div>
         </TabPane>
-        <TabPane tab="生活" key="4">
-          <div className="mytab">
-            <Life/>
-          </div>
-        </TabPane>
-        <TabPane tab="更多的我" key="5">
+        <TabPane tab="更多的我" key="4">
           <div className="mytab">
             <More/>
           </div>
