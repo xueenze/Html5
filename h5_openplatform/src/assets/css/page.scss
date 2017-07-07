@@ -1,0 +1,636 @@
+@import "variables.scss";
+
+body{
+    background-color: $background_white;
+    font-size:14px;
+    margin: 0;
+    padding:0;
+    font-family: 'PingFang SC','Myriad Pro','Hiragino Sans GB','microsoft yahei';
+}
+
+//header
+.header{
+    position: fixed;
+    top: 0;
+    height:96px;
+    width:100%;
+    z-index:1;
+
+    
+    .header-bg{
+        width:1200px;
+        margin:0 auto;
+        z-index:2;
+
+        .header-bg-in{
+            position: relative;
+
+            .header-logo{
+                position: absolute;
+                width: 133px;
+                height: 24px;
+                background-image: url(../images/logo.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 36px;
+                left:85px;
+                z-index: 2;
+                cursor: pointer;
+            }
+
+            .header-nav{
+                position: absolute;
+                right: 75px;
+                line-height:96px;
+                height:96px;
+                z-index: 2;
+
+                a{
+                    text-decoration: none;
+                    color:$background_blue;
+                    font-weight: 200;
+                    line-height: 96px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    padding-bottom: 35px;
+                    margin-right: 50px;
+                }
+
+                #header-nav-description{
+
+                    border-bottom:solid transparent 5px;
+                    position: relative;
+
+                    .slider{
+                        position: absolute;
+                        display:block;
+                        left: 0;
+                        bottom:-3px;
+                        margin:0 auto;
+                        height: 3px;
+                        background-color: $background_blue;
+                        width: 0;
+                        transition: all 0.3s ease
+                    }
+
+                    &:hover{
+                        font-weight: 400 !important;
+
+                        .slider{
+                            width: 100%;
+                        }
+                    }
+                }
+
+
+                .logging{
+                    border-radius: 30px;
+                    border: 1px solid;
+                    padding: 5px 17px;
+                    margin-left: 10px;
+
+                    &:hover{
+                        background-color: $background_blue;
+                        transition: all 0.3s;
+                        color: $background_white;
+                        border-color: transparent;
+                    }
+                }
+
+                #header-nav-active-rectangle:hover{
+                    width:0px;
+                }
+            }
+        }
+    }
+
+    .header-wrap{
+        background-color:$background_blue;
+        opacity: 0.05;
+        position: fixed;
+        top: 0;
+        height:96px;
+        width:100%;
+        z-index:1;
+    }
+}
+
+//首页
+.home{
+    //slider
+    .slider{
+        height:560px;
+        position: relative;
+
+        .slider-bg{
+            background-image: url(../images/slider.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            .slider-text{
+                position: relative;
+                top: 37%;
+            }
+
+            .slider-bg-more{
+                position: absolute;
+                bottom: 24px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width:68px;
+                height:43px;
+                text-decoration: none;
+                color: $background_white;
+                letter-spacing: 3px;
+                font-weight: lighter;
+                
+                @keyframes up_and_down {
+                    0%,100%
+                    {
+                        transform: translateY(4px);
+                    }
+                    50%
+                    {
+                        transform: translateY(-4px);
+                    }
+                }
+
+                i{
+                    background-image: url(../images/arrow_down.png);
+                    background-repeat: no-repeat;
+                    height: 13px;
+                    width: 15px;
+                    background-size: contain;
+                    display: inline-block;
+                    margin-top: 13px;
+
+                    animation: up_and_down 1.5s infinite linear;
+                }
+            }
+
+            .slider-text{
+                h2{
+                    font-size: 48px;
+                    letter-spacing: 15px;
+                    margin: 0 0;
+                    font-weight: 300;
+                    color: $background_blue;
+                }
+
+                p{
+                    font-size: 16px;
+                    color: 414966;
+                    font-weight: 300;
+                    line-height: 25px;
+                    margin:21px 0;
+                }
+            }
+        }
+    }
+
+    //about
+    .about{
+        height:640px;
+        width: 100%;
+        position: relative;
+        background-color: $background_gray;
+
+        .about-bg{
+            width: 1100px;
+            margin: 0 auto;
+
+            .about-bg-left{
+                float: left;
+                position: relative;
+                width: 50%;
+                height: 100%;
+
+                div{
+                    background-image:url(../images/galaxy.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 450px;
+                    width: 450px;
+                    position: absolute;
+                    margin-top:130px;
+                    margin-left: 20px;
+                }
+            }
+
+            .about-bg-right{
+                float: right;
+                width: 50%;
+                height: 100%;
+                text-align: left;
+
+                div{
+                    margin-top: 183px;
+                    margin-left: 75px;
+
+                    .big-rectangle{
+                        background-image: url(../images/rectangle_big.png);
+                        background-repeat: no-repeat;
+                        width: 72px;
+                        height: 4px;
+                        display: inline-block;
+                    }
+
+                    h3{
+                        font-size: 28px;
+                        font-weight: 400;
+                        letter-spacing: 2px;
+                        margin:10px 0;
+                    }
+
+                    p{
+                        margin:34px 0 43px 0;
+                        font-size: 18px;
+                        font-weight: 300;
+                        line-height: 30px;
+                        letter-spacing: 2px;
+                    }
+
+                    .about-yuewen-link{
+                        
+                        text-decoration: none;
+                        width: 174px;
+                        height: 48px;
+                        line-height: 48px;
+                        margin-top: 10px;
+                        background-color: $background_blue;
+                        color: $background_white;
+                        padding: 14px 20px 14px 28px;
+                        letter-spacing: 1px;
+                        border-radius: 120px;
+                        font-weight: 100;
+
+                        transition: all 0.3s;
+
+                        i{
+                            background-image: url(../images/cursor.png);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            width: 12px;
+                            height: 10px;
+                            display: inline-block;
+                            margin-left: 15px;
+
+                            transition: all 0.3s;
+                        }
+
+                        &:hover{
+                            background-color: $know_yuewen_active;
+                            font-weight: 400;
+
+                            i{
+                                transform:translateX(4px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //features
+    .features{
+        width:100%;
+        background:$background_white;
+
+        .features-bg{
+            height:510px;
+            position: relative;
+            padding:72px 0;
+
+            .features-bg-in{
+                width: 1100px;
+                margin:0 auto;
+                padding:40px 0;
+
+                ul{
+                    padding:0;
+                    margin: 0 20px;
+                    overflow: hidden;
+
+                    li{
+                        width:352px;
+                        float: left;
+                        list-style: none;
+                        height: 257px;
+                    }
+                }
+
+                h3{
+                    letter-spacing: 1px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin: 12px 0;
+                }
+
+                p{
+                    letter-spacing: 1px;
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin-bottom: 22px;
+                }
+
+                .small-rectangle{
+                    background-image: url(../images/rectangle_small.png);
+                    background-repeat: no-repeat;
+                    width: 56px;
+                    height: 4px;
+                    display: inline-block;
+                }
+
+                .features-bg-icon{
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 56px;
+                    height: 56px;
+                    display: inline-block;
+                }
+
+                @each $member in cool,target,open,balance,user,billing{
+                    .features-bg-#{$member}{
+                        @extend .features-bg-icon;
+                        background-image: url(../images/features_#{$member}.png);
+                    }
+                }
+            }
+        }
+    }
+
+    //brands
+    .brands{
+        width: 100%;
+        background-color: $background_gray;
+
+        .brands-bg{
+            height:240px;
+            position: relative;
+            padding:72px 0;
+            
+
+            .brands-bg-in{
+                width: 1100px;
+                margin:0 auto;
+
+                ul{
+                    padding:0;
+                    overflow: hidden;
+
+                    li{
+                        float: left;
+                        list-style: none;
+                        width: 216px;
+                        height: 140px;
+                    }
+                }
+
+                .brands-bg-icon{
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 160px;
+                    height: 72px;
+                    display: inline-block;
+                }
+
+                @each $member in amazon,xiaomi,jd,baidu,meizu,oppo,mobile,telecom,sohu,sogou{
+                    .brands-bg-#{$member}{
+                        @extend .brands-bg-icon;
+                        background-image: url(../images/logo_#{$member}.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//合作说明
+.description{
+    //slider
+    .slider{
+        height:460px;
+        width: 100%;
+        margin-top:96px;
+        background-color: $background_gray;
+
+        .slider-bg{
+            text-align: center;
+            padding-top: 130px;
+
+            h2{
+                margin: 0;
+                letter-spacing: 2px;
+                font-size: 28px;
+                font-weight: 400;
+                color: $background_blue;
+            }
+
+            p{
+                margin: 0;
+                margin-top: 40px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                line-height: 32px;
+                font-weight: 300;
+            }
+
+            a{
+                background-image: url(../images/view_yuewen_button.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 174px;
+                height:48px;
+                display: inline-block;
+                margin-top: 80px;
+            }
+        }
+    }
+
+    //process
+    .process{
+        width: 100%;
+
+        .process-bg{
+            height:568px;
+            width: 810px;
+            margin:0 auto;
+
+            .process-bg-in{
+                padding-top: 87px;
+
+                ul{
+                    padding: 0;
+                    margin: 0;
+
+                    li{
+                        float: left;
+                        list-style: none;
+                        height: 228px;
+
+                        h3{
+                            margin-top: 11px;
+                            margin-bottom: 1px;
+                            color: $background_blue;
+                            font-size: 20px;
+                            font-weight: 100;
+                            letter-spacing: 1px;
+                        }
+
+                        p{
+                            line-height: 20px;
+                            font-weight: 200;
+                            font-size: 14px;
+                        }
+
+                        .process-icon{
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            height:24px;
+                            width:24px;
+                            display: inline-block;
+                        }
+
+                        @each $member in contact,signup,approve,takeoff{
+                            .process-icon-#{$member}{
+                                @extend .process-icon;
+                                background-image: url(../images/process_#{$member}.png);
+                            }
+                        }
+                    }
+                }
+
+                &:after{
+                    clear:both;
+                }
+            }
+        }
+    }
+}
+
+//footer
+.footer{
+    height:272px;
+    width: 100%;
+    background-color: $background_blue;
+
+    .footer-bg{
+        width: 1100px;
+        height: 100%;
+        margin: 0 auto;
+
+        .footer-bg-in{
+            padding-top:70px;
+            position:relative;
+
+            ul{
+                overflow: hidden;
+                padding: 0;
+                width: 900px;
+
+                li{
+                    padding: 0;
+                    width: 174px;
+                    line-height: 28px;
+                    float: left;
+                    list-style: none;
+
+                    a{
+                        text-decoration: none;
+                        color: $background_white;
+                        font-weight: 100;
+                        font-size:14px;
+                    }
+                }
+            }
+
+            h3{
+                margin: 0 0 20px 0;
+                color: $footer_background;
+                font-weight: 400;
+            }
+
+            .footer-others{
+                position:absolute;
+                right:74px;
+                top:70px;
+
+                h3{
+                    margin-left: 42px;
+                }
+
+                ul{
+                    width: 100px;
+
+                    li{
+                        list-style: none;
+                        width: 100px;
+                        text-align: right;
+                    }
+                }
+
+                a{
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .footer-copy{
+        background-color: $copy_background;
+        width: 100%;
+        height: 60px;
+
+        .footer-copy-bg{
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
+
+            p{
+                text-decoration: none;
+                color: $background_white;
+                padding-left:25px;
+                font-weight: 100;
+                display: inline-block;
+                margin-top: 23px;
+                font-size: 14px;
+            }
+
+            .footer-copy-logo{
+                background-image:url(../images/copy_logo.png);
+                background-repeat: no-repeat;
+                background-size: 16px;
+                background-position: 0;
+            }
+
+            .footer-copy-others{
+                position:absolute;
+                right:74px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.bold-title{
+    font-weight:500;
+}
+
+.bold-span{
+    font-weight:400;
+}
+
+.underline-span{
+    text-decoration: underline;
+}
