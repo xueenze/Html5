@@ -1,22 +1,40 @@
 <html>
-    <head>
-        <script>
-            (function(){
-                var docEl = document.documentElement;
-                var docbody = document.body;
-                var baseFontSize = 100;
-                var pageMaxWidth = 750;
-                var rootHtml = document.getElementsByTagName('html')[0];
 
-                var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+<head>
+    <script>
+        (function () {
+            const docEl = document.documentElement;
+            const docBody = document.body;
+            const baseFontSize = 100;
+            const pageMaxWidth = 750;
+            const rootHtml = document.getElementsByTagName('html')[0];
 
-                var recalc =function(){
+            const resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
 
-                }
-            })();
-        </script>
-    </head>
-    <body>
-        
-    </body>
+            const recalc = function () {
+                let clientWidth = docEl.clientWidth || docBody.clientWidth;
+                const innerWidth = window.innerWidth;
+                const availWidth = screen.availWidth;
+                clientWidth = Math.min(clientWidth, innerWidth, availWidth, pageMaxWidth);
+
+                if (!clientWidth) return;
+
+                const resFont = baseFontSize * (clientWidth / pageMaxWidth);
+
+                rootHtml.style.fontSize = `${resFont}px`;
+            };
+
+            if (!window.addEventListener) return;
+
+            window.addEventListener(resizeEvt, recalc, false);
+
+            recalc();
+        }());
+    </script>
+</head>
+
+<body>
+
+</body>
+
 </html>
