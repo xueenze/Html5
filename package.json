@@ -1,0 +1,29 @@
+{
+  "name": "html5",
+  "version": "1.0.0",
+  "description": "这是我之前在公司或者个人的H5作品！",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^3.16.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-vue": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xueenze/html5.git"
+  },
+  "author": "enzexue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xueenze/html5/issues"
+  },
+  "homepage": "https://github.com/xueenze/html5#readme"
+}

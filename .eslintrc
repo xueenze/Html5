@@ -1,0 +1,31 @@
+{
+    "extends": "airbnb-base",
+    "globals": {
+        "MtaH5": true
+    },
+    "plugins": ["react", "vue"],
+    "env": {
+        "browser": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "func-names": "off",
+        "global-require": "off",
+        "linebreak-style": "off",
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "import/extensions": "off",
+        "import/first": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "no-mixed-operators": "off",
+        "no-new": "off",
+        "no-param-reassign": "off",
+        "no-plusplus": "off",
+        "vars-on-top": "off"
+    }
+}
