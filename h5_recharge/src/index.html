@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/main.css" rel="stylesheet">
+
+    <script>
+        /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
+        (function() {
+            var docEl = document.documentElement,
+                docBody = document.body,
+                baseFontSize = 100,
+                pageMaxWidth = 750,
+                rootHtml = document.getElementsByTagName('html')[0],
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = clientWidth = docEl.clientWidth || docBody.clientWidht;
+
+                    //最大宽度显示为750的宽度
+                    if (clientWidth > pageMaxWidth) {
+                        clientWidth = pageMaxWidth
+                    }
+
+                    if (!clientWidth) return;
+                    rootHtml.style.fontSize = baseFontSize * (clientWidth / pageMaxWidth) + 'px';
+                };
+            if (!window.addEventListener) return;
+
+            window.addEventListener(resizeEvt, recalc, false);
+
+            recalc();
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="home">
+                <!-- 抽奖数字 -->
+                <div class="prize_number">
+                    <p>
+                        已抽
+                        <span>1</span>
+                        次
+                    </p>
+                </div>
+                <!-- 老虎机数字 -->
+                <div class="num_box">
+                    <div class="num"></div>
+                    <div class="num"></div>
+                    <div class="num"></div>
+                </div>
+                <div class="confirm_button">抽 奖</div>
+        </div>
+
+        <!-- 遮罩层 -->
+        <div class="bg"></div>
+
+        <!-- 弹窗蒙版 -->
+        <div class="popup_bg">
+                <!-- 中奖数额 -->
+                <div class="prize_number">
+                    <h2>恭喜你</h2>
+                    <p>你已成功领取<span>248</span>点</p>
+                    <a href="">确认</a>
+                </div>
+                <!-- 中奖纪录 -->
+                <div class="prize_record">
+                    <ul>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">721</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">12</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">12</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">721</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">12</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">12</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">2</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">2</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">2</span>点
+                        </li>
+                        <li>
+                            <span class="prize_record_date">6.21</span>
+                            <span class="prize_record_text">抽奖获得</span>
+                            <span class="prize_record_num">2</span>点
+                        </li>
+                    </ul>
+                    <div class="prize_record_bg"></div>
+                    <div class="close_popup">
+                        <b></b>
+                    </div>
+                </div>
+                <!-- 中奖规则 -->
+                <div class="prize_rules">
+                    <ul>
+                        <li>
+                            <p>
+                                <span>·</span>
+                                活动时间：本月18日 - 24日；
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>·</span>
+                                通过起点读书Android端（v6.4.0以上版本）才可参加活动，低版本用户请升级到最新版本后参与；
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>·</span>
+                                只有通过微信支付、支付宝、QQ钱包渠道充值，且单笔金额&ge;10元，才可获得抽奖机会；单笔充值只能获得一次抽奖机会；
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>·</span>
+                                同一账号每天最多可获得十五次抽奖机会；
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>·</span>
+                                通过抽奖获得的起点币（不舍使用期限）最少为1点，最多为999点，抽中后会稍后发放到账户内。
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="prize_rules_copy">本活动最终解释权归起点读书所有</div>
+                    <div class="close_popup">
+                        <b></b>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/bandit.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
