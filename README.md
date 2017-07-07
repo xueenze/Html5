@@ -1,6 +1,3 @@
-# SelfIntroduction
-这是一个个人介绍的静态页面
+# H5 相关作品
 
-V1：第一版页面，Jquery + Jquery.easytab
-<br />
-V2：第二版页面，React + Webpack + Ant-Design-Mobile + Animate.css + ES6
+这是我之前在公司或者个人的H5作品！
