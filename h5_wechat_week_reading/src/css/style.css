@@ -1,0 +1,171 @@
+html{
+    font-size:100px !important;
+}
+
+body{
+    width:750px;
+    margin:0 auto;
+    background:#fff;
+}
+
+.wrapper{
+
+}
+
+.wrapper .banner-wrapper{
+    width:100%;
+    height:4.2rem;
+    background-image:url("../images/banner.jpg");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+
+}
+
+.wrapper .banner-wrapper h2{
+    color: #a59169;
+    border: 1px solid #a59169;
+    font-size: 0.5rem;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.65rem;
+    width: 2rem;
+    margin: 0 auto;
+}
+
+.wrapper .booksuggest-wrapper{
+    margin-top:0.6rem;
+}
+
+.wrapper .booksuggest-wrapper h2{
+    color:#a59169;
+    font-size: 0.5rem;
+    text-align:center;
+}
+
+.wrapper .booksuggest-wrapper ul{
+    list-style: none;
+    padding: 0 0.9rem;
+    overflow: hidden;
+    margin-top:0.48rem;
+}
+
+.wrapper .booksuggest-wrapper ul .line{
+    width: 1px;
+    height:1rem;
+    background:#bfbfbf;
+    margin-top:0.4rem;
+    margin-left:0.3rem;
+    margin-right:0.3rem;
+}
+
+.wrapper .booksuggest-wrapper ul li{
+    float:left;
+    width:2.5rem;
+}
+
+.wrapper .booksuggest-wrapper ul li a{
+    display: block;
+}
+
+.wrapper .booksuggest-wrapper ul li a img{
+    width:1.5rem;
+    height:2rem;
+    margin:0 auto;
+    display: block;
+}
+
+.wrapper .booksuggest-wrapper ul li h3{
+    color:#656565;
+    text-align:center;
+    margin-top:0.32rem;
+    font-size:0.3rem;
+}
+
+.wrapper .optionget-wrapper{
+    margin-top:80px;
+}
+
+.wrapper .optionget-wrapper h2{
+    color:#a59169;
+    font-size:0.5rem;
+    text-align:center;
+}
+
+.wrapper .optionget-wrapper ul{
+    list-style: none;
+    padding: 0 0.32rem;
+    overflow: hidden;
+    margin-top:0.28rem;
+}
+
+.wrapper .optionget-wrapper ul li{
+    margin-top: 0.2rem;
+}
+
+.wrapper .optionget-wrapper ul li h3{
+    font-size:0.3rem;
+    color:#a59169;
+    margin:0;
+}
+
+.wrapper .optionget-wrapper ul li p{
+    font-size: 0.2rem;
+    margin: 0;
+    margin-top: 0.1rem;
+    line-height: 0.6rem;
+    font-weight: 400;
+}
+
+.wrapper .optionget-wrapper ul li .left_p{
+    padding: 0 2.6rem 0 0;
+}
+
+.wrapper .optionget-wrapper ul li p span{
+    font-weight: bold;
+}
+
+.wrapper .optionget-wrapper img{
+    width: 2.3rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 15.2rem;
+    left: 6rem;
+}
+
+.wrapper .rules-wrapper{
+    margin-top:1.06rem;
+}
+
+.wrapper .rules-wrapper h2{
+    color:#a59169;
+    font-size:0.5rem;
+    text-align:center;
+}
+
+.wrapper .rules-wrapper .rules{
+    padding:0 0.32rem;
+}
+
+.wrapper .rules-wrapper .rules p{
+    margin-top:0.48rem 0 0 0;
+    font-size: 0.2rem;
+    line-height: 0.6rem;
+    font-weight: 400;
+}
+
+.wrapper .footer{
+    margin-top: 0.8rem;
+    color: #b6b5b2;
+}
+
+.wrapper .footer p{
+    height: 1.2rem;
+    border-radius: 0.35rem 0 0 0;
+    background-color: #eae9e5;
+    line-height: 1.2rem;
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    font-size:0.26rem
+}
