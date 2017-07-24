@@ -55,6 +55,14 @@
         noticeHtml = '<div class="tipbar">'+noticeInfo.tips+'</div>';
     }
 
+    var activityCommon = {
+        //活动未开始时的提示信息
+        unBeginTip :"",
+
+        //活动已结束时的提示信息
+        endTip :"",
+    };
+
     %>
     <% include ../../component/activity/header.html %>
 
@@ -208,14 +216,7 @@ function getUnit(type){
         <p class = "part1-fans c1"><%= fanNumTrim(bookActInfo.fanNum) %></p>
         <a class = "part1-zhuli ovh c2 bg1" data-click = "zhuli1" href = "//book.qidian.com/info/<%= tmplConf.bookInfo.bookId%>" title = "助力+">助力+</a>
         <!--使用inline-block布局，不要加换行-->
-        <ul class = "part1-items tc">
-            <% 
-                var missionInfo = tmplConf.missionInfo;
-                var finishFlag = data.finishFlag;
-                
-                for(i = 0;i < missionInfo.length;i++){
-            %>
-                <li class = "part1-item rel <%= finishFlag[i] == '1' ? 'active' : ''%>" data-item = "<%= i %>">
+        <ul class = "part1-items tc"><% var missionInfo = tmplConf.missionInfo;var finishFlag = data.finishFlag;for(i = 0;i < missionInfo.length;i++){%><li class = "part1-item rel <%= finishFlag[i] == '1' ? 'active' : ''%>" data-item = "<%= i %>">
                     <div class = "part1-content">
                         <div class = "part1-border"></div>
                         <p class = "part1-word part1-item-name"><%= missionInfo[i].typeName %></p>
@@ -279,17 +280,11 @@ function getUnit(type){
                                 <% } %>                
                         <% } %>
                     </div>
-                </li>
-                <% } %>
-            </ul>
+                </li><% } %></ul>
     </div>
     <div class = "part2">
         <!--使用inline-block布局，不要加换行-->
-        <ul class = "part2-nav tc">
-            <li class = "part2-nav-item rel active" data-click = "part2Nav">看新书</li>
-            <li class = "part2-nav-item rel" data-click = "part2Nav">追大神</li>
-            <li class = "part2-nav-item rel" data-click = "part2Nav">挑书单</li>
-        </ul>
+        <ul class = "part2-nav tc"><li class = "part2-nav-item rel active" data-click = "part2Nav">看新书</li><li class = "part2-nav-item rel" data-click = "part2Nav">追大神</li><li class = "part2-nav-item rel" data-click = "part2Nav">挑书单</li></ul>
         <ul class = "part2-nav-content">
             <li class = "part2-content-item ovh rel">
                 <div class = "book-cover" data-click = "zhuli1">
@@ -308,11 +303,7 @@ function getUnit(type){
                 </div>
                 <div class = "part2-item2-detail rel">
                     <h2 class = "title"><%= tmplConf.authorInfo.authorName %></h2>
-                    <p class = "detail">
-                        <p>原谅我这一生不羁放荡爱自由~~~~dgadhfkjadfhkj</p>
-                        <p><a title='123' href='https://m.qidian.com/book/3582993' target='_blank' rel='noopener noreferrer'>adfdsf</a></p>
-                        <p><a title='123' href='https://m.qidian.com/book/3582993' target='_blank' rel='noopener noreferrer'>123123</a></p>
-                    </p>
+                    <p class = "detail"><%- tmplConf.authorInfo.authorDesc %></p>          
                 </div>
             </li>
             <li class = "part2-content-item dn">
@@ -474,5 +465,3 @@ function getUnit(type){
 
 </script>
 </html>
-
-https://activity.qidian.com/2017/58782567

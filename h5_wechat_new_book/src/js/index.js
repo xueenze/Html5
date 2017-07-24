@@ -340,7 +340,7 @@
 
         var btn = $("#loadShuDan"),
             ajaxOpiton = {
-                url : "/ajax/NewBookV2/bookList",
+                url : "/ajax/NewBookV2/bookList?activityId=" + config.actId,
                 success : _ajaxSucc,
                 error : _ajaxErr,
                 type : "get"
@@ -447,7 +447,16 @@
         //这里我们处理用户点击了作者描述中的书籍信息时的操作
         function _clickBookInDesc(){
             $(".part2-item2-detail").find("a").each(function(){
-                console.log($(this).attr("href"));
+                var pattern = /\d+/g;
+                var link = $(this).attr("href");
+                if(pattern.test(link)){
+                    var bookId = link.match(pattern);
+                    $(this).click(function(){
+                        jssdk.bookUrl(bookId[0], "");
+                        return false;
+                    });
+                }
+                console.log();
             });
         }
 
@@ -458,7 +467,7 @@
     //part3部分的投票
     (function(){
         var ajaxOption = {
-            url : "/ajax/NewBookV2/addVote",
+            url : "/ajax/NewBookV2/addVote?activityId=" + config.actId,
             success : _ajaxSucc,
             error : _ajaxErr
             },
@@ -607,7 +616,7 @@
 
         var submitForm = $("#submitForm"),
             ajaxOptions = {
-                url : "/ajax/NewBookV2/comment",
+                url : "/ajax/NewBookV2/comment?activityId=" + config.actId,
                 success : _ajaxSucc,
                 error : _ajaxErr
             };
@@ -812,7 +821,7 @@
             },
             part5 = $(".part5"),
             ajaxOpitons = {
-                url : "/ajax/NewBookV2/list",
+                url : "/ajax/NewBookV2/list?activityId=" + config.actId,
                 success : _ajaxSucc,
                 error : _ajaxErr,
                 type : "get",
@@ -1082,7 +1091,7 @@
     //点赞和取消点赞
     (function(){
         var ajaxOptions = {
-            url : "/ajax/NewBookV2/like",
+            url : "/ajax/NewBookV2/like?activityId=" + config.actId,
             success : _ajaxSucc,
             error : _ajaxErr
         };
