@@ -1,0 +1,67 @@
+.rel {
+  position: relative; }
+
+.tc {
+  text-align: center; }
+
+body {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #fff; }
+
+.wrapper .banner-wrapper {
+  background-image: url(../images/banner.jpg);
+  padding-top: 150%;
+  background-size: 100% auto;
+  background-position: left top;
+  background-repeat: no-repeat; }
+  .wrapper .banner-wrapper .fans-title {
+    font-size: 0.32rem;
+    color: #0362ae;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 0; }
+  .wrapper .banner-wrapper .fans-account {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #0362ae;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0; }
+  .wrapper .banner-wrapper .banner-assistant a {
+    background-color: #000;
+    color: #0362ae;
+    font-size: 0.36rem;
+    line-height: 2;
+    position: absolute;
+    top: 54%;
+    left: 35%;
+    width: 30%;
+    text-decoration: none; }
+  .wrapper .banner-wrapper .banner-mission ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .wrapper .banner-wrapper .banner-mission ul li {
+      background-color: #000;
+      width: 30%;
+      margin: 0 1%;
+      display: inline-block; }
+      .wrapper .banner-wrapper .banner-mission ul li .mission-content .mission-border {
+        border-color: #0362ae;
+        position: absolute;
+        top: 0.15rem;
+        right: 0.15rem;
+        left: 0.15rem;
+        bottom: 0.15rem;
+        border-width: 0.06rem;
+        border-style: solid; }
+
+/*# sourceMappingURL=style.css.map */
