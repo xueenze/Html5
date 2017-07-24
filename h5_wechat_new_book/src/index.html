@@ -1,96 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <!--引入活动的header头部分-->
-    <%
-    //该部分的处理，变量名字，请不要动，可以新增，不可删减，有些在common里面，会被使用的
-    var platforms = {
-            "iosApp" : 0,
-            "androidApp" : 1,
-            "iosWap" : 2,
-            "androidWap" : 3,
-            "pc" : 4,
-            "iosWechat" : 5,
-            "androidWechat" : 6
-        },
-        acStatus = {
-            "activity" : 0,
-            "unBegin" : 1,
-            "end" : 2
-        },
-        platform = data.platform,
-        activityStatus = data.activityStatus,
-        isLogin = data.isLogin === 1 ? true : false,
-        version = "",
-        versionNum = "";
 
-    if(platform == platforms.iosApp || platform == platforms.androidApp){
-        version = data.appInfo.versionStr;
-        versionNum = data.appInfo.versionNum;
-    }
+    <meta charset="UTF-8">
+    <title>《无疆》新书全线上架</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="小刀锋利,男频,起点,新书,上架,白金大神">
+    <meta name="description" content="7月小刀锋利新书上架~">
+    <meta name="robots" content="all">
+    <meta name="baiduspider" content="all">
+    <meta name="googlebot" content="all">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
 
-    var userInfo = data.userInfo || {};
+    <script>
+    /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
+    (function () {
+        var docEl = document.documentElement,
+            docBody = document.body,
+            baseFontSize = 100,
+            pageMaxWidth = 750,
+            rootHtml = document.getElementsByTagName('html')[0],
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth || docBody.clientWidth;
+                var innerWidth = window.innerWidth;
+                var availWidth = screen.availWidth;
+                clientWidth = Math.min(clientWidth, innerWidth, availWidth, pageMaxWidth);
+                if (!clientWidth) return;
+                var resFont = baseFontSize * (clientWidth / pageMaxWidth);
+                rootHtml.style.fontSize = resFont + 'px';
+            };
+        if (!window.addEventListener) return;
+        window.addEventListener(resizeEvt, recalc, false);
+        recalc();
+    })();
+</script>
 
-    var actConf = data.actConf;
-    var tmplConf = data.tmplConf;
-    var bookActInfo = data.bookActInfo;
-    var titleInfo = actConf.titleInfo[0];
+<link rel="stylesheet" data-ignore="true" href="css/style.css" />
 
-    var activityHeader = {
-        title : titleInfo.title,
-        keywords : titleInfo.keywords,
-        description : titleInfo.desc
-    };
-
-    var colors = {
-        "c1" : "#000"
-    };
-
-    var noticeInfo = actConf.noticeInfo;
-    var noticeHtml = "";
-
-    if(noticeInfo.tipsLink){
-        noticeHtml = '<div class="tipbar"><a href = "'+noticeInfo.tipsLink+'">'+noticeInfo.tips+'</a></div>';
-    }else{
-        noticeHtml = '<div class="tipbar">'+noticeInfo.tips+'</div>';
-    }
-
-    var activityCommon = {
-        //活动未开始时的提示信息
-        unBeginTip :"",
-
-        //活动已结束时的提示信息
-        endTip :"",
-    };
-
-    %>
-    <% include ../../component/activity/header.html %>
-
-    <!--引入本活动的特定化样式-->
-    <link data-ignore="true" rel="stylesheet" href="<%= staticConf.staticPath %>/templates/WeChatNewBook/css/style.css">
-    <style>
-        .wrapper .part1{
-            background-image : url(<%= tmplConf.imgUrl || staticConf.staticPath+"/templates/WeChatNewBook/images/part1-bg2.jpg" %>);
-        }
-
-        .wrapper .part2 .part2-nav-content .part2-content-item .part2-item2-img .part2-item2-photo{
-            background-image : url(<%= tmplConf.authorInfo.authorImg || staticConf.staticPath+"/templates/WeChatNewBook/images/author2.jpg" %>);
-        }
-
+<style>
         .c1,.part1-item-icon,.part5-nav-content{
-            color:<%= colors.c1 %>;
+            color:#000;
         }
         .bg1,.part3-item .vote-btn,.part4 .form .btn,.pop .btn{
-            background-color:<%= colors.c1 %>;
+            background-color:#000;
         }
         .part1-item .part1-word,.part2-jinru,.part6 .title,.part2 .link{
-            color:<%= tmplConf.brightColor %>;
+            color:#0362ae;
         }
         .part1-item.active,.part1-item.active .part1-item-name,.part2-item2-photo{
-            background-color:<%= tmplConf.brightColor %>;
+            background-color:#0362ae;
         }
         .part1-border,.part2-item2-border{
-            border-color:<%= tmplConf.brightColor %>;
+            border-color:#0362ae;
         }
         .part1-item.active .part1-border{
             border-color:#000;
@@ -99,11 +64,11 @@
             color : #000;
         }
         .part2-jinru:after{
-            border-left-color:<%= tmplConf.brightColor %>;
+            border-left-color:#0362ae;
         }
         .part6 .link,.part5 .link{
-            color: <%= tmplConf.brightColor %>;
-            border-bottom-color: <%= tmplConf.brightColor %>;
+            color: #0362ae;
+            border-bottom-color: #0362ae;
         }
         .part5-nav-content .praise.active{
             color : #de482c;
@@ -115,15 +80,12 @@
             filter: drop-shadow(#de482c 1.3em 0px);
             border-right: 1.3em solid transparent;
         }
-
         .part1 .c2,.part3-item .vote-btn,.part4 .form .btn,.pop .btn{
-            color : <%= tmplConf.brightColor %>;
+            color : #0362ae;
         }
-
         .part1 .c1{
-            color : <%= tmplConf.brightColor %>;
+            color : #0362ae;
         }
-
         .part3-item .vote-btn{
             bottom: 40%;
         }
@@ -134,13 +96,11 @@
             right:0px;
             top: 87%;
             height: 3px;
-            box-shadow: 0px 5px 16px <%= tmplConf.brightColor %>;
+            box-shadow: 0px 5px 16px #0362ae;
         }
-
         .part2-jinru{
             position:relative;
         }
-
         .part3-item .name{
             top : 10%;
             left: 5%;
@@ -148,320 +108,206 @@
             font-size : 0.48rem;
             font-weight : bold;
         }
-
     </style>
 </head>
+
 <body>
-<%
+    <div class="wrapper" id="wrapper">
+        <div class="part1 rel tc" style="background-image:url(images/part1-bg2.jpg)">
+<p class="part1-title c1">当前粉丝总值</p>
+<p class="part1-fans c1">197,235</p>
+<a class="part1-zhuli ovh c2 bg1" data-click="zhuli1" href="javescript:void(0)" title="助力+">助力+</a>
+<ul class="part1-items tc">
+    <li class="part1-item rel active" data-item="0">
+        <div class="part1-content">
+            <div class="part1-border"></div>
+            <p class="part1-word part1-item-name">首订解印</p>
+            <p class="part1-word part1-item-detail">首订人数达<br/>10,000</p>
+            <p class="part1-word part1-item-gift">荣登精选</p>
+            <p class="part1-word part1-item-line"></p>
+            <p class="part1-word part1-item-icon"></p>
 
-// 粉丝数转字符串，中间添加逗号间隔
-function fanNumTrim(num){
-    var arr = [],
-        res = 0,
-        base = 1000,
-        cur = 0;
+            <p class="part1-word part1-item-number">当前<span class="c-fff">10000</span>人</p>
 
-    while(num) {
-        cur = num % base;
-        if (num >= base) {
-            if (cur < 10) {
-                cur = "00" + cur;
-            } else if (cur < 100) {
-                cur = "0" + cur;
-            }
-        }
-        arr.push(cur);
-        num = Math.floor(num/base);
-    }
-    return arr.reverse().join(",") || "0";
-}
-
-function trimDate(time,sep){
-    var date = new Date(time*1000);
-    sep = sep || ".";
-
-    return trimDate.trimNum(date.getFullYear()) + 
-            sep + trimDate.trimNum(date.getMonth() + 1) + 
-            sep + trimDate.trimNum(date.getDate());
-}
-
-trimDate.trimNum = function(num){
-    if(num - 9 > 0){
-        return num;
-    }else{
-        return "0" + num;
-    }
-}
-
-// 根据任务类型返回单位文案
-function getUnit(type){
-    switch(type){
-        case "firstOrder" : return "人";
-        case "monthTicketNum" : return "张";
-        case "donate" : return "点";
-        case "bookList" : return "个";
-        case "maleMonthTicket" : return "名";
-        case "femaleMonthTicket" : return "名";
-        default : return "";
-    }
-}
-
-%>
-
-<% include ../../component/activity/common.html %>
-<div class="topbar"><%- noticeHtml%></div>
-<div class="wrapper" id = "wrapper">
-    <div class = "part1 rel tc">
-        <p class = "part1-title c1">当前粉丝总值</p>
-        <p class = "part1-fans c1"><%= fanNumTrim(bookActInfo.fanNum) %></p>
-        <a class = "part1-zhuli ovh c2 bg1" data-click = "zhuli1" href = "//book.qidian.com/info/<%= tmplConf.bookInfo.bookId%>" title = "助力+">助力+</a>
-        <!--使用inline-block布局，不要加换行-->
-        <ul class = "part1-items tc"><% var missionInfo = tmplConf.missionInfo;var finishFlag = data.finishFlag;for(i = 0;i < missionInfo.length;i++){%><li class = "part1-item rel <%= finishFlag[i] == '1' ? 'active' : ''%>" data-item = "<%= i %>">
-                    <div class = "part1-content">
-                        <div class = "part1-border"></div>
-                        <p class = "part1-word part1-item-name"><%= missionInfo[i].typeName %></p>
-                        <!-- 不同的任务类型做不同的处理 -->
-                        <% if(missionInfo[i].type == "firstOrder"){ %>
-                                <p class = "part1-word part1-item-detail">
-                                    首订人数达<br/><%= fanNumTrim(missionInfo[i].goal) %> 人
-                                </p>
-                        <% } %>
-                        <% if(missionInfo[i].type == "monthTicketNum"){ %>
-                                <p class = "part1-word part1-item-detail">
-                                    获得月票数<br/><%= missionInfo[i].goal %> 张
-                                </p>
-                        <% } %>
-                        <% if(missionInfo[i].type == "donate"){ %>
-                                <p class = "part1-word part1-item-detail">
-                                    打赏金额<br/>超过 <%= missionInfo[i].goal %> 万点
-                                </p>
-                        <% } %>
-                        <% if(missionInfo[i].type == "bookList"){ %>
-                                <p class = "part1-word part1-item-detail">
-                                    含本书书单<br/>破 <%= missionInfo[i].goal %>
-                                </p>
-                        <% } %>
-                        <% if(missionInfo[i].type == "maleMonthTicket" || missionInfo[i].type == "femaleMonthTicket"){ %>
-                                <p class = "part1-word part1-item-detail">
-                                    新书月票<br/>前 <%= missionInfo[i].goal %> 名
-                                </p>
-                        <% } %>
-                        
-                        <p class = "part1-word part1-item-gift"><%= missionInfo[i].reward %></p>
-                        <p class = "part1-word part1-item-line"></p>
-                        <p class = "part1-word part1-item-icon"></p>
-
-                        <!-- 不同的任务类型做不同的处理 -->
-                        <% if(missionInfo[i].type == "firstOrder" || missionInfo[i].type == "monthTicketNum" || 
-                                missionInfo[i].type == "donate" || missionInfo[i].type == "bookList"){ 
-                                if(bookActInfo.missionNum[i] - 0 > 0){ %>
-                                    <p class = "part1-word part1-item-number">
-                                        当前
-                                        <span class = "c-fff"><%= bookActInfo.missionNum[i] %></span>
-                                        <%= getUnit(missionInfo[i].type) %>
-                                    </p>
-                                <% } else { %>
-                                    <p class = "part1-word part1-item-number">
-                                        当前<span class = "c-fff">未达到</span>
-                                    </p>
-                                <% } %>
-                        <% } %>
-                        <% if(missionInfo[i].type == "maleMonthTicket" || missionInfo[i].type == "femaleMonthTicket"){ 
-                                if(bookActInfo.missionNum[i].voteRan > 0 && bookActInfo.missionNum[i].voteRan <= 10){ %>
-                                    <p class = "part1-word part1-item-number">
-                                        当前第
-                                        <span class = "c-fff"><%= bookActInfo.missionNum[i].voteRan%></span>
-                                        <%= getUnit(missionInfo[i].type) %>
-                                    </p>
-                                <% } else { %>
-                                    <p class = "part1-word part1-item-number">
-                                        当前<span class = "c-fff">未达到</span>
-                                    </p>
-                                <% } %>                
-                        <% } %>
-                    </div>
-                </li><% } %></ul>
-    </div>
-    <div class = "part2">
-        <!--使用inline-block布局，不要加换行-->
-        <ul class = "part2-nav tc"><li class = "part2-nav-item rel active" data-click = "part2Nav">看新书</li><li class = "part2-nav-item rel" data-click = "part2Nav">追大神</li><li class = "part2-nav-item rel" data-click = "part2Nav">挑书单</li></ul>
-        <ul class = "part2-nav-content">
-            <li class = "part2-content-item ovh rel">
-                <div class = "book-cover" data-click = "zhuli1">
-                    <img class = "book-img wp100" src = "<%= tmplConf.bookInfo.bookImg || staticConf.staticPath+'/templates/WeChatNewBook/images/book-cover.jpg' %>" alt = "<%= tmplConf.bookInfo.bookName%>" />
-                </div>
-                <p class = "part2-item1-detail rel">
-                    <%- tmplConf.bookInfo.bookDesc %>
-                    <a class = "part2-jinru" data-click = "zhuli2" href = "//book.qidian.com/info/<%= tmplConf.bookInfo.bookId%>" title = "进入" style = "white-space:nowrap;">进入</a>
-                </p>
-            </li>
-            <li class = "part2-content-item ovh dn">
-                <div class = "part2-item2-img rel">
-                    <div class = "part2-item2-bg"></div>
-                    <div class = "part2-item2-border"></div>
-                    <div class = "part2-item2-photo"></div>
-                </div>
-                <div class = "part2-item2-detail rel">
-                    <h2 class = "title"><%= tmplConf.authorInfo.authorName %></h2>
-                    <p class = "detail"><%- tmplConf.authorInfo.authorDesc %></p>          
-                </div>
-            </li>
-            <li class = "part2-content-item dn">
-                <ul class = "part2-item3-content ovh tc"></ul>
-                <div class = "tc part2-change-content" >
-                    <div class = "" id = "loadShuDan" data-click = "shudanqiehuan">
-                        <span class = "load">&nbsp;</span>换一换
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class = "part3">
-        <%
-            //人气PK战奖励，默认取第一个
-            var popularityPkReward = tmplConf.popularityPk.length == 0 ? 
-                                "单个角色获得1万票，作家将为该角色撰写番外" : tmplConf.popularityPk[0].roleReward;
-        %>
-        <div class = "title">
-            <h2>人气PK战</h2>
-            <p><%= popularityPkReward %></p>
         </div>
-        <ul>
-            <%
-                var popularityPk = tmplConf.popularityPk;
-                for(i = 0;i < popularityPk.length;i++){
-            %>
-            <li class = "part3-item rel" style = "background-image:url(<%= popularityPk[i].backgroundImg || staticConf.staticPath+'/templates/WeChatNewBook/images/role-11.jpg'%>);">
-                <h3 class = "abs name"><%= popularityPk[i].roleName %></h3>
-                <p class = "abs detail"><%= popularityPk[i].roleDesc %></p>
-                <div class = "abs vote">0</div>
-                <div class = "abs scale">
-                    <div class = "percent" style = "width:0%;"></div>
-                </div>
-                <a class = "abs vote-btn" data-click = "voteBtn" data-id = "<%= i+1 %>">我投TA</a>
-            </li>
-            <% } %>
-        </ul>
-    </div>
-    <div class = "part4">
-        <div class = "title">
-            <h2>情节大畅想</h2>
-            <p><%= tmplConf.imagination %></p>
+    </li>
+    <li class="part1-item rel " data-item="1">
+        <div class="part1-content">
+            <div class="part1-border"></div>
+            <p class="part1-word part1-item-name">月票解印</p>
+            <p class="part1-word part1-item-detail">新书月票<br/>前 十 名</p>
+            <p class="part1-word part1-item-gift">看点推荐</p>
+            <p class="part1-word part1-item-line"></p>
+            <p class="part1-word part1-item-icon"></p>
+
+            <p class="part1-word part1-item-number">当前<span class="c-fff">未达到</span></p>
+
         </div>
-        <form id = "submitForm" class = "form" action = "" method = "post">
-            <div class = "item">
-                <label class = "label" for = "part4TitleInput">请输入标题</label>
-                <input class = "input" id = "part4TitleInput" name = "title" type = "text" placeholder = "取个小标题吧，4-30字就好" autocomplete = "off" />
+    </li>
+    <li class="part1-item rel active" data-item="2">
+        <div class="part1-content">
+            <div class="part1-border"></div>
+            <p class="part1-word part1-item-name">打赏解印</p>
+            <p class="part1-word part1-item-detail">打赏金额<br/>超过100万点</p>
+            <p class="part1-word part1-item-gift">红包讨论</p>
+            <p class="part1-word part1-item-line"></p>
+            <p class="part1-word part1-item-icon"></p>
+
+            <p class="part1-word part1-item-number">当前<span class="c-fff">618920</span>点</p>
+
+        </div>
+    </li>
+</ul>
+</div>
+<div class="part2">
+    <ul class="part2-nav tc">
+        <li class="part2-nav-item rel active" data-click="part2Nav">
+            看新书</li>
+        <li class="part2-nav-item rel" data-click="part2Nav">
+            追大神</li>
+        <li class="part2-nav-item rel" data-click="part2Nav">挑书单
+        </li>
+    </ul>
+    <ul class="part2-nav-content">
+        <li class="part2-content-item ovh rel">
+            <div class="book-cover" data-click="zhuli1">
+                <img class="book-img wp100" src="images/book-cover.jpg" alt="无疆" />
             </div>
-            <div class = "item">
-                <label class = "label" for = "part4TextArea">请输入正文</label>
-                <textarea class = "input" id = "part4TextArea" name = "content" rows = "6" placeholder = "来段大畅想吧，20-200字最佳" autocomplete = "off"></textarea>
-            </div>
-            <div class = "item">
-                <button class = "btn" type = "submit">发表畅想</button>
-            </div>
-        </form>
-    </div>
-    <div class="part5 rel">
-        <!--使用inline-block布局，不要加换行-->
-        <ul class="part5-nav tc">
-            <li class="part5-nav-item rel" data-type = "hot" data-click = "part5Nav">最热</li >
-            <li class="part5-nav-item rel active" data-type = "new" data-click = "part5Nav">最新</li>
-            <li class="part5-nav-item rel" data-type = "my" data-click = "part5Nav">我的</li>
-        </ul>
-        <ul class="part5-nav-content">
-            <li class = "item ovh tc load-msg" ><span class = "load"></span>正在加载...</li>
-        </ul>
-        <div class = "lay-1"></div>
-        <div class = "lay-2">
-            <div class = "lay2-load tc"><span class = "load"></span>正在更新...</div>
+            <p class="part2-item1-detail rel">
+                鹰击长空，鱼跃龙门，熊咆虎啸，万物皆有灵。末法之极，磁极轮转，世界变迁。曾经那个熟悉的世界，已经变得面目全非。当神话变成现实，当传说不再神秘，世界无疆，热血永恒。
+                <a class="part2-jinru" data-click="zhuli2" href="javascript:void(0);" title="进入" style="white-space:nowrap;">进入</a>
+</p>
+</li>
+<li class="part2-content-item ovh dn">
+    <div class="part2-item2-img rel">
+        <div class="part2-item2-bg"></div>
+        <div class="part2-item2-border"></div>
+        <div class="part2-item2-photo" style="background-image:url(images/author2.jpg)"></div>
+</div>
+<div class="part2-item2-detail rel">
+    <h2 class="title">小刀锋利</h2>
+    <p class="detail">
+        阅文集团白金作家，著有《<a class="link" data-click="toBookUrl" data-id="3582993" href="//book.qidian.com/info/3582993">弑天刃</a>》《
+        <a class="link" data-click="toBookUrl" data-id="3347784" href="//book.qidian.com/info/3347784">傲剑天穹</a>》《<a class="link"
+            data-click="toBookUrl" data-id="2104762" href="//book.qidian.com/info/2104762">战神变</a>》《
+        <a class="link" data-click="toBookUrl" data-id="1743644" href="//book.qidian.com/info/1743644">唯我独尊</a>》《<a class="link"
+            data-click="toBookUrl" data-id="1414604" href="//book.qidian.com/info/1414604">傲剑凌云</a>》《
+        <a class="link" data-click="toBookUrl" data-id="1158728" href="//book.qidian.com/info/1158728">重生之商途</a>》《<a class="link"
+            data-click="toBookUrl" data-id="130435" href="//book.qidian.com/info/130435">超级猎人</a>》等网络小说，作品磅礴大气，在业内及粉丝群体中极富盛名。
+    </p>
+</div>
+</li>
+<li class="part2-content-item dn">
+    <ul class="part2-item3-content ovh tc"></ul>
+    <div class="tc part2-change-content">
+        <div class="" id="loadShuDan" data-click="shudanqiehuan">
+            <span class="load">&nbsp;</span>换一换
         </div>
     </div>
-    <div class = "part6">
-        <h2 class = "title tc">活动规则</h2>
-        <div class = "rules">
-            <%= actConf.ruleInfo[0].content %>
+</li>
+</ul>
+</div>
+<div class="part3">
+    <div class="title">
+        <h2>人气PK战</h2>
+        <p>单个角色获得1万票，作家将为该角色撰写番外</p>
+    </div>
+    <ul>
+        <li class="part3-item rel" style="background-image:url(images/role-11.jpg);">
+<h3 class="abs name">楚羽</h3>
+<p class="abs detail">男主，性格开朗、热血，做事情有点冲动，知耻而后勇。</p>
+<div class="abs vote">0</div>
+<div class="abs scale">
+    <div class="percent" style="width:0%;"></div>
+</div>
+<a class="abs vote-btn" data-click="voteBtn" data-id="1">我投TA</a>
+</li>
+<li class="part3-item rel" style="background-image:url(images/role-21.jpg);">
+<h3 class="abs name">大家贼</h3>
+<p class="abs detail">一只麻雀，嘴巴很贱，号称要追求凰做女朋友。</p>
+<div class="abs vote">0</div>
+<div class="abs scale">
+    <div class="percent" style="width:0%;"></div>
+</div>
+<a class="abs vote-btn" data-click="voteBtn" data-id="2">我投TA</a>
+</li>
+<li class="part3-item rel" style="background-image:url(images/role-31.jpg);">
+<h3 class="abs name">徐小仙</h3>
+<p class="abs detail">魔教圣女，来自域外，智计百出，感情忠贞。</p>
+<div class="abs vote">0</div>
+<div class="abs scale">
+    <div class="percent" style="width:0%;"></div>
+</div>
+<a class="abs vote-btn" data-click="voteBtn" data-id="3">我投TA</a>
+</li>
+<li class="part3-item rel" style="background-image:url(images/role-41.jpg);">
+<h3 class="abs name">范建</h3>
+<p class="abs detail">一个贼兮兮的小胖子，擅长挖坟掘墓，擅长背锅。</p>
+<div class="abs vote">0</div>
+<div class="abs scale">
+    <div class="percent" style="width:0%;"></div>
+</div>
+<a class="abs vote-btn" data-click="voteBtn" data-id="4">我投TA</a>
+</li>
+</ul>
+</div>
+<div class="part4">
+    <div class="title">
+        <h2>情节大畅想</h2>
+        <p>获赞前十奖励作家签名书</p>
+    </div>
+    <form id="submitForm" class="form" action="" method="post">
+        <div class="item">
+            <label class="label" for="part4TitleInput">请输入标题</label>
+            <input class="input" id="part4TitleInput" name="title" type="text" placeholder="取个小标题吧，4-30字就好" autocomplete="off" />
         </div>
-        <p class = "copyright tc">本次活动最终解释权归起点读书所有</p>
+        <div class="item">
+            <label class="label" for="part4TextArea">请输入正文</label>
+            <textarea class="input" id="part4TextArea" name="content" rows="6" placeholder="来段大畅想吧，20-200字最佳" autocomplete="off"></textarea>
+        </div>
+        <div class="item">
+            <button class="btn" type="submit">发表畅想</button>
+        </div>
+    </form>
+</div>
+<div class="part5 rel">
+    <ul class="part5-nav tc">
+        <li class="part5-nav-item rel" data-type="hot" data-click="part5Nav">
+            最热</li>
+        <li class="part5-nav-item rel" data-type="new" data-click="part5Nav">
+            最新</li>
+        <li class="part5-nav-item rel active" data-type="recom" data-click="part5Nav">
+            精选</li>
+        <li class="part5-nav-item rel" data-type="my" data-click="part5Nav">我的
+        </li>
+    </ul>
+    <ul class="part5-nav-content">
+        <li class="item ovh tc load-msg"><span class="load"></span>正在加载...</li>
+    </ul>
+    <div class="lay-1"></div>
+    <div class="lay-2">
+        <div class="lay2-load tc"><span class="load"></span>正在更新...</div>
     </div>
 </div>
+<div class="part6">
+    <h2 class="title tc">活动规则</h2>
+    <ul class="tl">
+        <li class="rules-item">· 活动时间：2017.6.30-2017.7.4；</li>
+        <li class="rules-item">· 所有起点用户可通过起点读书Android端(v6.4.0及以上版本) 和起点读书iOS端(v3.8.0及以上版本) 参与活动，低版本用户请<a class="link" data-click="downApp" href='javascript:;'
+                title="升级到最新版本">升级到最新版本</a>后参与本活动；</li>
+        <li class="rules-item">· 三个解印任务需要作品粉丝的参与：</li>
+        <li class="rules-item">(1) 首订解印：7月1日当天《无疆》VIP章节订阅人数超过10,000人，成功解印。解印后，《无疆》将在活动结束后登上起点读书Android端及iOS端的精选页封推；</li>
+        <li class="rules-item">(2) 月票解印：截止7月4日24点，《无疆》获得男生风云榜前十名，成功解印。解印后，《无疆》将在7月15日登上起点读书服务号【看点】栏目推荐；</li>
+        <li class="rules-item">(3) 打赏解印：截止7月4日24点，《无疆》获得的打赏金额超过100万点，成功解印，解印后可为《无疆》成功开通红包讨论区；</li>
+        <li class="rules-item">· 人气PK战中，每位用户每天一票，可以投给喜爱的角色。单个角色获得票数超过10,000票，作者将为该角色撰写番外；</li>
+        <li class="rules-item">· 情节大畅想中，每位用户每天可发表5次。与作品无关、不文明的畅想将会被删除。截止7月4日24点，单条畅想获赞数排名前十名的用户，将获得作家小刀锋利签名书一本。获奖用户请在7月10日24点前<a class="link" href="//h5.if.qidian.com/Atom.axd/Api/Invite/Contact"
+                title="填写联系地址">填写联系地址</a>，可先行填写，逾期视为放弃，奖品将在2017年7月31日前寄出。</li>
+    </ul>
+    <p class="copyright tc">本次活动最终解释权归起点读书所有</p>
+</div>
+</div>
 </body>
-<%
-    var shareInfo = actConf.shareInfo[0];
-    var popupInfo = tmplConf.popupInfo;
-%>
-<% include ../../component/activity/footer.html %>
-<script data-ignore="true" src = "<%= staticConf.staticPath %>/templates/WeChatNewBook/js/index.js"></script>
+<script data-ignore="true" src="//qidian.gtimg.com/lib/jquery.1.9.1.min.js"></script>
+<script src="js/index.js"></script>
 
-<script>
-    yueWenActivityInstance({
-        //平台
-        uA : '<%= platform%>',
-
-        //字符串版本号
-        version : "<%= version%>",
-
-        //数字版本号
-        versionNum : "<%= versionNum%>",
-
-        //新书的上报id，与活动
-        activityId : "<%= actConf.actId%>",
-
-        actId : "<%= actConf.actId%>",
-
-        //活动状态
-        //0 活动正在进行
-        //1 活动未开始
-        //2 活动已结束
-        activityStatus : "<%= activityStatus%>",
-
-        //登陆状态
-        isLogin : <%= isLogin%>,
-
-        //书籍相关信息
-        bookInfo : {
-            //起点的书籍ID
-            qdId : "<%= tmplConf.bookInfo.bookId%>",
-
-            //创世的书籍ID
-            csId : ""
-
-        },
-
-        userInfo : <%- JSON.stringify(data.userInfo) -%>,
-
-        //投票相关的信息
-        voteInfo : <%- JSON.stringify(data.vote) -%>,
-
-        // APP的版本限制
-        appVersion : {
-            "IOS" : "3.8.0",
-            "Andriod" : "6.4.0"
-        },
-
-        shareOption : {
-            //分享的标题
-            title : "<%= shareInfo.title%>",
-            //分享出去的内容
-            desc : "<%= shareInfo.desc%>",
-            //分享出去的链接
-            link : location.href,
-            //分享出去的icon地址，该图片请注意，
-            img_url : location.protocol+"<%= shareInfo.share_img%>"
-        },
-
-        msgTips : {
-            // 发送评论成功后的提示，获赞第一再送王陆黏土手办
-            "sendSucc" : "畅想已发表<br/><%= tmplConf.imagination %>",
-
-            //活动未开始时的提示
-            unBeginTip : "活动将于<%= trimDate(actConf.startTime, '.') %>开始，敬请期待",
-
-            //活动结束时的提示
-            hasEndTip : "活动虽然结束啦<br/>但要继续支持《<%= tmplConf.bookInfo.bookName %>》哦~",
-        }
-
-    });
-
-</script>
 </html>
