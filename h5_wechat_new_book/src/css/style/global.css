@@ -1,0 +1,69 @@
+@charset "UTF-8";
+.tc {
+  text-align: center; }
+
+.tl {
+  text-align: left; }
+
+.tr {
+  text-align: right; }
+
+.tj {
+  text-align: justify; }
+
+/*浮动相关的*/
+.l {
+  float: left; }
+
+.r {
+  float: right; }
+
+.ovh {
+  overflow: hidden; }
+
+/*定位相关*/
+.rel {
+  position: relative; }
+
+.abs {
+  position: absolute; }
+
+/*手型*/
+.pointer {
+  cursor: pointer; }
+
+/*display的四种固定样式*/
+.di {
+  display: inline; }
+
+.dib {
+  display: inline-block; }
+
+.db {
+  display: block; }
+
+.dn {
+  display: none !important; }
+
+/* 滚动条 */
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px transparent; }
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+.scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+.scrollbar::-webkit-scrollbar-button {
+  height: 0;
+  width: 0; }
