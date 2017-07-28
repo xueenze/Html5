@@ -10,12 +10,11 @@ input,
 textarea{
     margin:0;
     padding:0;
-    tap-highlight-color:transparent;
 }
 
 html{
     overflow-y:scroll;
-    overflow:-moz-scrollbars-vertical;
+    overflow:vertical;
 }
 
 body,
@@ -31,7 +30,6 @@ a{
     text-decoration:none;
     color:#000;
     user-select:none;
-    tap-highlight-color:transparent;
 }
 
 a:hover,
@@ -42,7 +40,6 @@ a:visited{
 }
 
 img{
-    interpolation-mode:bicubic;
     border:0;
 }
 

@@ -16,28 +16,28 @@
     <meta name="format-detection" content="telephone=no" />
 
     <script>
-    /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
-    (function () {
-        var docEl = document.documentElement,
-            docBody = document.body,
-            baseFontSize = 100,
-            pageMaxWidth = 750,
-            rootHtml = document.getElementsByTagName('html')[0],
-            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-            recalc = function () {
-                var clientWidth = docEl.clientWidth || docBody.clientWidth;
-                var innerWidth = window.innerWidth;
-                var availWidth = screen.availWidth;
-                clientWidth = Math.min(clientWidth, innerWidth, availWidth, pageMaxWidth);
-                if (!clientWidth) return;
-                var resFont = baseFontSize * (clientWidth / pageMaxWidth);
-                rootHtml.style.fontSize = resFont + 'px';
-            };
-        if (!window.addEventListener) return;
-        window.addEventListener(resizeEvt, recalc, false);
-        recalc();
-    })();
-</script>
+        /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
+        (function () {
+            var docEl = document.documentElement,
+                docBody = document.body,
+                baseFontSize = 100,
+                pageMaxWidth = 750,
+                rootHtml = document.getElementsByTagName('html')[0],
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth || docBody.clientWidth;
+                    var innerWidth = window.innerWidth;
+                    var availWidth = screen.availWidth;
+                    clientWidth = Math.min(clientWidth, innerWidth, availWidth, pageMaxWidth);
+                    if (!clientWidth) return;
+                    var resFont = baseFontSize * (clientWidth / pageMaxWidth);
+                    rootHtml.style.fontSize = resFont + 'px';
+                };
+            if (!window.addEventListener) return;
+            window.addEventListener(resizeEvt, recalc, false);
+            recalc();
+        })();
+    </script>
 
 <link rel="stylesheet" data-ignore="true" href="css/style.css" />
 
@@ -114,51 +114,51 @@
 <body>
     <div class="wrapper" id="wrapper">
         <div class="part1 rel tc" style="background-image:url(images/part1-bg2.jpg)">
-<p class="part1-title c1">当前粉丝总值</p>
-<p class="part1-fans c1">197,235</p>
-<a class="part1-zhuli ovh c2 bg1" data-click="zhuli1" href="javescript:void(0)" title="助力+">助力+</a>
-<ul class="part1-items tc">
-    <li class="part1-item rel active" data-item="0">
-        <div class="part1-content">
-            <div class="part1-border"></div>
-            <p class="part1-word part1-item-name">首订解印</p>
-            <p class="part1-word part1-item-detail">首订人数达<br/>10,000</p>
-            <p class="part1-word part1-item-gift">荣登精选</p>
-            <p class="part1-word part1-item-line"></p>
-            <p class="part1-word part1-item-icon"></p>
+            <p class="part1-title c1">当前粉丝总值</p>
+            <p class="part1-fans c1">197,235</p>
+            <a class="part1-zhuli ovh c2 bg1" data-click="zhuli1" href="javescript:void(0)" title="助力+">助力+</a>
+            <ul class="part1-items tc">
+                <li class="part1-item rel active" data-item="0">
+                    <div class="part1-content">
+                        <div class="part1-border"></div>
+                        <p class="part1-word part1-item-name">首订解印</p>
+                        <p class="part1-word part1-item-detail">首订人数达<br/>10,000</p>
+                        <p class="part1-word part1-item-gift">荣登精选</p>
+                        <p class="part1-word part1-item-line"></p>
+                        <p class="part1-word part1-item-icon"></p>
 
-            <p class="part1-word part1-item-number">当前<span class="c-fff">10000</span>人</p>
+                        <p class="part1-word part1-item-number">当前<span class="c-fff">10000</span>人</p>
 
+                    </div>
+                </li>
+                <li class="part1-item rel " data-item="1">
+                    <div class="part1-content">
+                        <div class="part1-border"></div>
+                        <p class="part1-word part1-item-name">月票解印</p>
+                        <p class="part1-word part1-item-detail">新书月票<br/>前 十 名</p>
+                        <p class="part1-word part1-item-gift">看点推荐</p>
+                        <p class="part1-word part1-item-line"></p>
+                        <p class="part1-word part1-item-icon"></p>
+
+                        <p class="part1-word part1-item-number">当前<span class="c-fff">未达到</span></p>
+
+                    </div>
+                </li>
+                <li class="part1-item rel active" data-item="2">
+                    <div class="part1-content">
+                        <div class="part1-border"></div>
+                        <p class="part1-word part1-item-name">打赏解印</p>
+                        <p class="part1-word part1-item-detail">打赏金额<br/>超过100万点</p>
+                        <p class="part1-word part1-item-gift">红包讨论</p>
+                        <p class="part1-word part1-item-line"></p>
+                        <p class="part1-word part1-item-icon"></p>
+
+                        <p class="part1-word part1-item-number">当前<span class="c-fff">618920</span>点</p>
+
+                    </div>
+                </li>
+            </ul>
         </div>
-    </li>
-    <li class="part1-item rel " data-item="1">
-        <div class="part1-content">
-            <div class="part1-border"></div>
-            <p class="part1-word part1-item-name">月票解印</p>
-            <p class="part1-word part1-item-detail">新书月票<br/>前 十 名</p>
-            <p class="part1-word part1-item-gift">看点推荐</p>
-            <p class="part1-word part1-item-line"></p>
-            <p class="part1-word part1-item-icon"></p>
-
-            <p class="part1-word part1-item-number">当前<span class="c-fff">未达到</span></p>
-
-        </div>
-    </li>
-    <li class="part1-item rel active" data-item="2">
-        <div class="part1-content">
-            <div class="part1-border"></div>
-            <p class="part1-word part1-item-name">打赏解印</p>
-            <p class="part1-word part1-item-detail">打赏金额<br/>超过100万点</p>
-            <p class="part1-word part1-item-gift">红包讨论</p>
-            <p class="part1-word part1-item-line"></p>
-            <p class="part1-word part1-item-icon"></p>
-
-            <p class="part1-word part1-item-number">当前<span class="c-fff">618920</span>点</p>
-
-        </div>
-    </li>
-</ul>
-</div>
 <div class="part2">
     <ul class="part2-nav tc">
         <li class="part2-nav-item rel active" data-click="part2Nav">
@@ -176,36 +176,36 @@
             <p class="part2-item1-detail rel">
                 鹰击长空，鱼跃龙门，熊咆虎啸，万物皆有灵。末法之极，磁极轮转，世界变迁。曾经那个熟悉的世界，已经变得面目全非。当神话变成现实，当传说不再神秘，世界无疆，热血永恒。
                 <a class="part2-jinru" data-click="zhuli2" href="javascript:void(0);" title="进入" style="white-space:nowrap;">进入</a>
-</p>
-</li>
-<li class="part2-content-item ovh dn">
-    <div class="part2-item2-img rel">
-        <div class="part2-item2-bg"></div>
-        <div class="part2-item2-border"></div>
-        <div class="part2-item2-photo" style="background-image:url(images/author2.jpg)"></div>
-</div>
-<div class="part2-item2-detail rel">
-    <h2 class="title">小刀锋利</h2>
-    <p class="detail">
-        阅文集团白金作家，著有《<a class="link" data-click="toBookUrl" data-id="3582993" href="//book.qidian.com/info/3582993">弑天刃</a>》《
-        <a class="link" data-click="toBookUrl" data-id="3347784" href="//book.qidian.com/info/3347784">傲剑天穹</a>》《<a class="link"
-            data-click="toBookUrl" data-id="2104762" href="//book.qidian.com/info/2104762">战神变</a>》《
-        <a class="link" data-click="toBookUrl" data-id="1743644" href="//book.qidian.com/info/1743644">唯我独尊</a>》《<a class="link"
-            data-click="toBookUrl" data-id="1414604" href="//book.qidian.com/info/1414604">傲剑凌云</a>》《
-        <a class="link" data-click="toBookUrl" data-id="1158728" href="//book.qidian.com/info/1158728">重生之商途</a>》《<a class="link"
-            data-click="toBookUrl" data-id="130435" href="//book.qidian.com/info/130435">超级猎人</a>》等网络小说，作品磅礴大气，在业内及粉丝群体中极富盛名。
-    </p>
-</div>
-</li>
-<li class="part2-content-item dn">
-    <ul class="part2-item3-content ovh tc"></ul>
-    <div class="tc part2-change-content">
-        <div class="" id="loadShuDan" data-click="shudanqiehuan">
-            <span class="load">&nbsp;</span>换一换
-        </div>
-    </div>
-</li>
-</ul>
+            </p>
+        </li>
+        <li class="part2-content-item ovh dn">
+            <div class="part2-item2-img rel">
+                <div class="part2-item2-bg"></div>
+                <div class="part2-item2-border"></div>
+                <div class="part2-item2-photo" style="background-image:url(images/author2.jpg)"></div>
+            </div>
+            <div class="part2-item2-detail rel">
+                <h2 class="title">小刀锋利</h2>
+                <p class="detail">
+                    阅文集团白金作家，著有《<a class="link" data-click="toBookUrl" data-id="3582993" href="//book.qidian.com/info/3582993">弑天刃</a>》《
+                    <a class="link" data-click="toBookUrl" data-id="3347784" href="//book.qidian.com/info/3347784">傲剑天穹</a>》《<a class="link"
+                        data-click="toBookUrl" data-id="2104762" href="//book.qidian.com/info/2104762">战神变</a>》《
+                    <a class="link" data-click="toBookUrl" data-id="1743644" href="//book.qidian.com/info/1743644">唯我独尊</a>》《<a class="link"
+                        data-click="toBookUrl" data-id="1414604" href="//book.qidian.com/info/1414604">傲剑凌云</a>》《
+                    <a class="link" data-click="toBookUrl" data-id="1158728" href="//book.qidian.com/info/1158728">重生之商途</a>》《<a class="link"
+                        data-click="toBookUrl" data-id="130435" href="//book.qidian.com/info/130435">超级猎人</a>》等网络小说，作品磅礴大气，在业内及粉丝群体中极富盛名。
+                </p>
+            </div>
+        </li>
+        <li class="part2-content-item dn">
+            <ul class="part2-item3-content ovh tc"></ul>
+            <div class="tc part2-change-content">
+                <div class="" id="loadShuDan" data-click="shudanqiehuan">
+                    <span class="load">&nbsp;</span>换一换
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
 <div class="part3">
     <div class="title">
@@ -307,7 +307,16 @@
 </div>
 </div>
 </body>
-<script data-ignore="true" src="//qidian.gtimg.com/lib/jquery.1.9.1.min.js"></script>
-<script src="js/index.js"></script>
+<script src="js/lib/jquery-1.9.1.min.js"></script>
+<script src="js/lib/sea.min.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            "part2" : "../js/part2.js"
+        }
+    });
+
+    seajs.use("./js/main.js");
+</script>
 
 </html>
