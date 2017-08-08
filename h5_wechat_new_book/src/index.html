@@ -112,13 +112,30 @@
 </head>
 
 <body>
+    <div class="pop tc dn" id="pop">
+        <div class="mask-bg"></div>
+        <div class="pop-conatinter">
+            <div class="pop-box rel" data-type="alert">
+                <div class="pop-close" data-click="closePop">
+                    <span class="pop-close-left"></span>
+                    <span class="pop-close-right"></span>
+                </div>
+                <div class="pop-icon"></div>
+                <div class="pop-title">留个名吧</div>
+                <div class="pop-content"><p>登录留名后才能愉快玩耍哦</p></div>
+                <div class="pop-footer ovh">
+                    <a class="btn left-btn dn" data-click="" title="" href="javascript:;"></a>
+                    <a class="btn right-btn" data-click="login" title="" href="javascript:;">好的</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="wrapper" id="wrapper">
         <div class="part1 rel tc" style="background-image:url(images/part1-bg2.jpg)">
             <p class="part1-title c1">当前粉丝总值</p>
             <p class="part1-fans c1">197,235</p>
             <a class="part1-zhuli ovh c2 bg1" data-click="zhuli1" href="javescript:void(0)" title="助力+">助力+</a>
-            <ul class="part1-items tc">
-                <li class="part1-item rel active" data-item="0">
+            <ul class="part1-items tc"><li class="part1-item rel active" data-item="0">
                     <div class="part1-content">
                         <div class="part1-border"></div>
                         <p class="part1-word part1-item-name">首订解印</p>
@@ -130,8 +147,7 @@
                         <p class="part1-word part1-item-number">当前<span class="c-fff">10000</span>人</p>
 
                     </div>
-                </li>
-                <li class="part1-item rel " data-item="1">
+                </li><li class="part1-item rel " data-item="1">
                     <div class="part1-content">
                         <div class="part1-border"></div>
                         <p class="part1-word part1-item-name">月票解印</p>
@@ -143,8 +159,7 @@
                         <p class="part1-word part1-item-number">当前<span class="c-fff">未达到</span></p>
 
                     </div>
-                </li>
-                <li class="part1-item rel active" data-item="2">
+                </li><li class="part1-item rel active" data-item="2">
                     <div class="part1-content">
                         <div class="part1-border"></div>
                         <p class="part1-word part1-item-name">打赏解印</p>
@@ -156,163 +171,158 @@
                         <p class="part1-word part1-item-number">当前<span class="c-fff">618920</span>点</p>
 
                     </div>
+                </li></ul>
+        </div>
+        <div class="part2">
+            <ul class="part2-nav tc"><li class="part2-nav-item rel active">看新书</li><li class="part2-nav-item rel">追大神</li><li class="part2-nav-item rel">挑书单</li></ul>
+            <ul class="part2-nav-content">
+                <li class="part2-content-item ovh rel">
+                    <div class="book-cover" data-click="zhuli1">
+                        <img class="book-img wp100" src="images/book-cover.jpg" alt="无疆" />
+                    </div>
+                    <p class="part2-item1-detail rel">
+                        鹰击长空，鱼跃龙门，熊咆虎啸，万物皆有灵。末法之极，磁极轮转，世界变迁。曾经那个熟悉的世界，已经变得面目全非。当神话变成现实，当传说不再神秘，世界无疆，热血永恒。
+                        <a class="part2-jinru" data-click="zhuli2" href="javascript:void(0);" title="进入" style="white-space:nowrap;">进入</a>
+                    </p>
+                </li>
+                <li class="part2-content-item ovh dn">
+                    <div class="part2-item2-img rel">
+                        <div class="part2-item2-bg"></div>
+                        <div class="part2-item2-border"></div>
+                        <div class="part2-item2-photo" style="background-image:url(images/author2.jpg)"></div>
+                    </div>
+                    <div class="part2-item2-detail rel">
+                        <h2 class="title">小刀锋利</h2>
+                        <p class="detail">
+                            阅文集团白金作家，著有《<a class="link" data-click="toBookUrl" data-id="3582993" href="//book.qidian.com/info/3582993">弑天刃</a>》《
+                            <a class="link" data-click="toBookUrl" data-id="3347784" href="//book.qidian.com/info/3347784">傲剑天穹</a>》《<a class="link"
+                                data-click="toBookUrl" data-id="2104762" href="//book.qidian.com/info/2104762">战神变</a>》《
+                            <a class="link" data-click="toBookUrl" data-id="1743644" href="//book.qidian.com/info/1743644">唯我独尊</a>》《<a class="link"
+                                data-click="toBookUrl" data-id="1414604" href="//book.qidian.com/info/1414604">傲剑凌云</a>》《
+                            <a class="link" data-click="toBookUrl" data-id="1158728" href="//book.qidian.com/info/1158728">重生之商途</a>》《<a class="link"
+                                data-click="toBookUrl" data-id="130435" href="//book.qidian.com/info/130435">超级猎人</a>》等网络小说，作品磅礴大气，在业内及粉丝群体中极富盛名。
+                        </p>
+                    </div>
+                </li>
+                <li class="part2-content-item dn">
+                    <ul class="part2-item3-content ovh tc"><li class="part2-item3" data-click="qushudan" data-id="239169"><ul class="rel book-lists"><li class="book" data-rank="1"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/1009661793/180"></a></li><li class="book" data-rank="2"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/1009602961/180"></a></li><li class="book" data-rank="3"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/1009243008/180"></a></li></ul><h3 class="name">神一样的书单，魔一样的单主</h3></li><li class="part2-item3" data-click="qushudan" data-id="234363"><ul class="rel book-lists"><li class="book" data-rank="1"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/3582993/180"></a></li><li class="book" data-rank="2"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/3434900/180"></a></li><li class="book" data-rank="3"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/1039430/180"></a></li></ul><h3 class="name">蝴蝶藍</h3></li><li class="part2-item3" data-click="qushudan" data-id="234665"><ul class="rel book-lists"><li class="book" data-rank="1"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/3680829/180"></a></li><li class="book" data-rank="2"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/1005561769/180"></a></li><li class="book" data-rank="3"><a href="javascript:;"><img class="wp100" src="https://qidian.qpic.cn/qdbimg/349573/1009383057/180"></a></li></ul><h3 class="name">来啊，造作啊！</h3></li></ul>
+                    <div class="tc part2-change-content">
+                        <div class="" id="loadShuDan" data-click="shudanqiehuan">
+                            <span class="load">&nbsp;</span>换一换
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
-<div class="part2">
-    <ul class="part2-nav tc">
-        <li class="part2-nav-item rel active" data-click="part2Nav">
-            看新书</li>
-        <li class="part2-nav-item rel" data-click="part2Nav">
-            追大神</li>
-        <li class="part2-nav-item rel" data-click="part2Nav">挑书单
-        </li>
-    </ul>
-    <ul class="part2-nav-content">
-        <li class="part2-content-item ovh rel">
-            <div class="book-cover" data-click="zhuli1">
-                <img class="book-img wp100" src="images/book-cover.jpg" alt="无疆" />
+        <div class="part3">
+            <div class="title">
+                <h2>人气PK战</h2>
+                <p>单个角色获得1万票，作家将为该角色撰写番外</p>
             </div>
-            <p class="part2-item1-detail rel">
-                鹰击长空，鱼跃龙门，熊咆虎啸，万物皆有灵。末法之极，磁极轮转，世界变迁。曾经那个熟悉的世界，已经变得面目全非。当神话变成现实，当传说不再神秘，世界无疆，热血永恒。
-                <a class="part2-jinru" data-click="zhuli2" href="javascript:void(0);" title="进入" style="white-space:nowrap;">进入</a>
-            </p>
-        </li>
-        <li class="part2-content-item ovh dn">
-            <div class="part2-item2-img rel">
-                <div class="part2-item2-bg"></div>
-                <div class="part2-item2-border"></div>
-                <div class="part2-item2-photo" style="background-image:url(images/author2.jpg)"></div>
+            <ul>
+                <li class="part3-item rel" style="background-image:url(images/role-11.jpg);">
+                    <h3 class="abs name">楚羽</h3>
+                    <p class="abs detail">男主，性格开朗、热血，做事情有点冲动，知耻而后勇。</p>
+                    <div class="abs vote">0</div>
+                    <div class="abs scale">
+                        <div class="percent" style="width:0%;"></div>
+                    </div>
+                    <a class="abs vote-btn" data-click="voteBtn" data-id="1">我投TA</a>
+                </li>
+                <li class="part3-item rel" style="background-image:url(images/role-21.jpg);">
+                    <h3 class="abs name">大家贼</h3>
+                    <p class="abs detail">一只麻雀，嘴巴很贱，号称要追求凰做女朋友。</p>
+                    <div class="abs vote">0</div>
+                    <div class="abs scale">
+                        <div class="percent" style="width:0%;"></div>
+                    </div>
+                    <a class="abs vote-btn" data-click="voteBtn" data-id="2">我投TA</a>
+                </li>
+                <li class="part3-item rel" style="background-image:url(images/role-31.jpg);">
+                    <h3 class="abs name">徐小仙</h3>
+                    <p class="abs detail">魔教圣女，来自域外，智计百出，感情忠贞。</p>
+                    <div class="abs vote">0</div>
+                    <div class="abs scale">
+                        <div class="percent" style="width:0%;"></div>
+                    </div>
+                    <a class="abs vote-btn" data-click="voteBtn" data-id="3">我投TA</a>
+                </li>
+                <li class="part3-item rel" style="background-image:url(images/role-41.jpg);">
+                    <h3 class="abs name">范建</h3>
+                    <p class="abs detail">一个贼兮兮的小胖子，擅长挖坟掘墓，擅长背锅。</p>
+                    <div class="abs vote">0</div>
+                    <div class="abs scale">
+                        <div class="percent" style="width:0%;"></div>
+                    </div>
+                    <a class="abs vote-btn" data-click="voteBtn" data-id="4">我投TA</a>
+                </li>
+            </ul>
+        </div>
+        <div class="part4">
+            <div class="title">
+                <h2>情节大畅想</h2>
+                <p>获赞前十奖励作家签名书</p>
             </div>
-            <div class="part2-item2-detail rel">
-                <h2 class="title">小刀锋利</h2>
-                <p class="detail">
-                    阅文集团白金作家，著有《<a class="link" data-click="toBookUrl" data-id="3582993" href="//book.qidian.com/info/3582993">弑天刃</a>》《
-                    <a class="link" data-click="toBookUrl" data-id="3347784" href="//book.qidian.com/info/3347784">傲剑天穹</a>》《<a class="link"
-                        data-click="toBookUrl" data-id="2104762" href="//book.qidian.com/info/2104762">战神变</a>》《
-                    <a class="link" data-click="toBookUrl" data-id="1743644" href="//book.qidian.com/info/1743644">唯我独尊</a>》《<a class="link"
-                        data-click="toBookUrl" data-id="1414604" href="//book.qidian.com/info/1414604">傲剑凌云</a>》《
-                    <a class="link" data-click="toBookUrl" data-id="1158728" href="//book.qidian.com/info/1158728">重生之商途</a>》《<a class="link"
-                        data-click="toBookUrl" data-id="130435" href="//book.qidian.com/info/130435">超级猎人</a>》等网络小说，作品磅礴大气，在业内及粉丝群体中极富盛名。
-                </p>
-            </div>
-        </li>
-        <li class="part2-content-item dn">
-            <ul class="part2-item3-content ovh tc"></ul>
-            <div class="tc part2-change-content">
-                <div class="" id="loadShuDan" data-click="shudanqiehuan">
-                    <span class="load">&nbsp;</span>换一换
+            <form id="submitForm" class="form" action="" method="post">
+                <div class="item">
+                    <label class="label" for="part4TitleInput">请输入标题</label>
+                    <input class="input" id="part4TitleInput" name="title" type="text" placeholder="取个小标题吧，4-30字就好" autocomplete="off" />
                 </div>
+                <div class="item">
+                    <label class="label" for="part4TextArea">请输入正文</label>
+                    <textarea class="input" id="part4TextArea" name="content" rows="6" placeholder="来段大畅想吧，20-200字最佳" autocomplete="off"></textarea>
+                </div>
+                <div class="item">
+                    <button class="btn" type="submit">发表畅想</button>
+                </div>
+            </form>
+        </div>
+        <div class="part5 rel">
+            <ul class="part5-nav tc">
+                <li class="part5-nav-item rel" data-type="hot" data-click="part5Nav">
+                    最热</li>
+                <li class="part5-nav-item rel" data-type="new" data-click="part5Nav">
+                    最新</li>
+                <li class="part5-nav-item rel active" data-type="recom" data-click="part5Nav">
+                    精选</li>
+                <li class="part5-nav-item rel" data-type="my" data-click="part5Nav">我的
+                </li>
+            </ul>
+            <ul class="part5-nav-content">
+                <li class="item ovh"><h3 class="title ell">你俯瞰风景卢卡斯劲峰阿基里斯卡几点啦时间的交多少拉科技的</h3><p class="content">发牢骚会计分录时间啊发送加大了科技的快乐撒娇的就撒昆仑决大家级的萨克拉家带口拉屎大路口的监控</p><div class="ovh info"><img class="user-img l" src="http://file2.qidian.com/face/37/75/3775903100x100.png"><span class="name l ell">我已成功注册而你又在哪里</span><span class="time l">2017年07月28日</span><span class="praise r " data-click="dianzan" data-id="799467">0</span></div></li>
+                <li class="item ovh tc load-msg"><span class="load"></span>正在加载...</li>
+            </ul>
+            <div class="lay-1"></div>
+            <div class="lay-2">
+                <div class="lay2-load tc"><span class="load"></span>正在更新...</div>
             </div>
-        </li>
-    </ul>
-</div>
-<div class="part3">
-    <div class="title">
-        <h2>人气PK战</h2>
-        <p>单个角色获得1万票，作家将为该角色撰写番外</p>
-    </div>
-    <ul>
-        <li class="part3-item rel" style="background-image:url(images/role-11.jpg);">
-<h3 class="abs name">楚羽</h3>
-<p class="abs detail">男主，性格开朗、热血，做事情有点冲动，知耻而后勇。</p>
-<div class="abs vote">0</div>
-<div class="abs scale">
-    <div class="percent" style="width:0%;"></div>
-</div>
-<a class="abs vote-btn" data-click="voteBtn" data-id="1">我投TA</a>
-</li>
-<li class="part3-item rel" style="background-image:url(images/role-21.jpg);">
-<h3 class="abs name">大家贼</h3>
-<p class="abs detail">一只麻雀，嘴巴很贱，号称要追求凰做女朋友。</p>
-<div class="abs vote">0</div>
-<div class="abs scale">
-    <div class="percent" style="width:0%;"></div>
-</div>
-<a class="abs vote-btn" data-click="voteBtn" data-id="2">我投TA</a>
-</li>
-<li class="part3-item rel" style="background-image:url(images/role-31.jpg);">
-<h3 class="abs name">徐小仙</h3>
-<p class="abs detail">魔教圣女，来自域外，智计百出，感情忠贞。</p>
-<div class="abs vote">0</div>
-<div class="abs scale">
-    <div class="percent" style="width:0%;"></div>
-</div>
-<a class="abs vote-btn" data-click="voteBtn" data-id="3">我投TA</a>
-</li>
-<li class="part3-item rel" style="background-image:url(images/role-41.jpg);">
-<h3 class="abs name">范建</h3>
-<p class="abs detail">一个贼兮兮的小胖子，擅长挖坟掘墓，擅长背锅。</p>
-<div class="abs vote">0</div>
-<div class="abs scale">
-    <div class="percent" style="width:0%;"></div>
-</div>
-<a class="abs vote-btn" data-click="voteBtn" data-id="4">我投TA</a>
-</li>
-</ul>
-</div>
-<div class="part4">
-    <div class="title">
-        <h2>情节大畅想</h2>
-        <p>获赞前十奖励作家签名书</p>
-    </div>
-    <form id="submitForm" class="form" action="" method="post">
-        <div class="item">
-            <label class="label" for="part4TitleInput">请输入标题</label>
-            <input class="input" id="part4TitleInput" name="title" type="text" placeholder="取个小标题吧，4-30字就好" autocomplete="off" />
         </div>
-        <div class="item">
-            <label class="label" for="part4TextArea">请输入正文</label>
-            <textarea class="input" id="part4TextArea" name="content" rows="6" placeholder="来段大畅想吧，20-200字最佳" autocomplete="off"></textarea>
+        <div class="part6">
+            <h2 class="title tc">活动规则</h2>
+            <ul class="tl">
+                <li class="rules-item">· 活动时间：2017.6.30-2017.7.4；</li>
+                <li class="rules-item">· 所有起点用户可通过起点读书Android端(v6.4.0及以上版本) 和起点读书iOS端(v3.8.0及以上版本) 参与活动，低版本用户请<a class="link" data-click="downApp" href='javascript:;'
+                        title="升级到最新版本">升级到最新版本</a>后参与本活动；</li>
+                <li class="rules-item">· 三个解印任务需要作品粉丝的参与：</li>
+                <li class="rules-item">(1) 首订解印：7月1日当天《无疆》VIP章节订阅人数超过10,000人，成功解印。解印后，《无疆》将在活动结束后登上起点读书Android端及iOS端的精选页封推；</li>
+                <li class="rules-item">(2) 月票解印：截止7月4日24点，《无疆》获得男生风云榜前十名，成功解印。解印后，《无疆》将在7月15日登上起点读书服务号【看点】栏目推荐；</li>
+                <li class="rules-item">(3) 打赏解印：截止7月4日24点，《无疆》获得的打赏金额超过100万点，成功解印，解印后可为《无疆》成功开通红包讨论区；</li>
+                <li class="rules-item">· 人气PK战中，每位用户每天一票，可以投给喜爱的角色。单个角色获得票数超过10,000票，作者将为该角色撰写番外；</li>
+                <li class="rules-item">· 情节大畅想中，每位用户每天可发表5次。与作品无关、不文明的畅想将会被删除。截止7月4日24点，单条畅想获赞数排名前十名的用户，将获得作家小刀锋利签名书一本。获奖用户请在7月10日24点前<a class="link" href="//h5.if.qidian.com/Atom.axd/Api/Invite/Contact"
+                        title="填写联系地址">填写联系地址</a>，可先行填写，逾期视为放弃，奖品将在2017年7月31日前寄出。</li>
+            </ul>
+            <p class="copyright tc">本次活动最终解释权归起点读书所有</p>
         </div>
-        <div class="item">
-            <button class="btn" type="submit">发表畅想</button>
-        </div>
-    </form>
-</div>
-<div class="part5 rel">
-    <ul class="part5-nav tc">
-        <li class="part5-nav-item rel" data-type="hot" data-click="part5Nav">
-            最热</li>
-        <li class="part5-nav-item rel" data-type="new" data-click="part5Nav">
-            最新</li>
-        <li class="part5-nav-item rel active" data-type="recom" data-click="part5Nav">
-            精选</li>
-        <li class="part5-nav-item rel" data-type="my" data-click="part5Nav">我的
-        </li>
-    </ul>
-    <ul class="part5-nav-content">
-        <li class="item ovh tc load-msg"><span class="load"></span>正在加载...</li>
-    </ul>
-    <div class="lay-1"></div>
-    <div class="lay-2">
-        <div class="lay2-load tc"><span class="load"></span>正在更新...</div>
     </div>
-</div>
-<div class="part6">
-    <h2 class="title tc">活动规则</h2>
-    <ul class="tl">
-        <li class="rules-item">· 活动时间：2017.6.30-2017.7.4；</li>
-        <li class="rules-item">· 所有起点用户可通过起点读书Android端(v6.4.0及以上版本) 和起点读书iOS端(v3.8.0及以上版本) 参与活动，低版本用户请<a class="link" data-click="downApp" href='javascript:;'
-                title="升级到最新版本">升级到最新版本</a>后参与本活动；</li>
-        <li class="rules-item">· 三个解印任务需要作品粉丝的参与：</li>
-        <li class="rules-item">(1) 首订解印：7月1日当天《无疆》VIP章节订阅人数超过10,000人，成功解印。解印后，《无疆》将在活动结束后登上起点读书Android端及iOS端的精选页封推；</li>
-        <li class="rules-item">(2) 月票解印：截止7月4日24点，《无疆》获得男生风云榜前十名，成功解印。解印后，《无疆》将在7月15日登上起点读书服务号【看点】栏目推荐；</li>
-        <li class="rules-item">(3) 打赏解印：截止7月4日24点，《无疆》获得的打赏金额超过100万点，成功解印，解印后可为《无疆》成功开通红包讨论区；</li>
-        <li class="rules-item">· 人气PK战中，每位用户每天一票，可以投给喜爱的角色。单个角色获得票数超过10,000票，作者将为该角色撰写番外；</li>
-        <li class="rules-item">· 情节大畅想中，每位用户每天可发表5次。与作品无关、不文明的畅想将会被删除。截止7月4日24点，单条畅想获赞数排名前十名的用户，将获得作家小刀锋利签名书一本。获奖用户请在7月10日24点前<a class="link" href="//h5.if.qidian.com/Atom.axd/Api/Invite/Contact"
-                title="填写联系地址">填写联系地址</a>，可先行填写，逾期视为放弃，奖品将在2017年7月31日前寄出。</li>
-    </ul>
-    <p class="copyright tc">本次活动最终解释权归起点读书所有</p>
-</div>
-</div>
 </body>
 <script src="js/lib/jquery-1.9.1.min.js"></script>
 <script src="js/lib/sea.min.js"></script>
 <script>
     seajs.config({
         alias:{
-            "part2" : "../js/part2.js"
+            "part2" : "../js/part2.js",
+            "part3" : "../js/part3.js",
+            "part5" : "../js/part5.js",
         }
     });
 
