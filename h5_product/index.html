@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<head>
+    <title>作品展示</title>
+    <link rel="stylesheet" data-ignore="true" href="css/index.css" />
+</head>
+
+<body>
+    <div class="container">
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.simpler-sidebar.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
+        (function() {
+            var docEl = document.documentElement,
+                docBody = document.body,
+                baseFontSize = 100,
+                pageMaxWidth = 750,
+                rootHtml = document.getElementsByTagName('html')[0],
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth || docBody.clientWidth;
+                    var innerWidth = window.innerWidth;
+                    var availWidth = screen.availWidth;
+                    clientWidth = Math.min(clientWidth, innerWidth, availWidth, pageMaxWidth);
+                    if (!clientWidth) return;
+                    var resFont = baseFontSize * (clientWidth / pageMaxWidth);
+                    rootHtml.style.fontSize = resFont + 'px';
+                };
+            if (!window.addEventListener) return;
+            window.addEventListener(resizeEvt, recalc, false);
+            recalc();
+        })();
+    </script>
+</body>
+
+</html>
