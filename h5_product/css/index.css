@@ -56,7 +56,11 @@ body {
     }
 }
 
-.container .list .card .image a {}
+.container .list .card .image a {
+    max-height: 200px;
+    overflow: hidden;
+    display: block;
+}
 
 .container .list .card .image a img {
     display: block;

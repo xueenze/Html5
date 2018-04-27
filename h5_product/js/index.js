@@ -42,6 +42,144 @@ var json = {
                 desc: "柱状图生成"
             }]
         }]
+    },
+    activity: {
+        title: "【阅文集团】部分运营活动示例",
+        data: [
+            {
+                title: "1.515活动",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/515/1.png",
+                        desc: "515战斗页"
+                    },
+                    {
+                        imageUrl: "images/活动示例/515/2.png",
+                        desc: "515排行榜"
+                    }
+                ]
+            },
+            {
+                title: "2.节日活动",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/节日活动/万圣夜.png",
+                        desc: "万圣节活动"
+                    },
+                    {
+                        imageUrl: "images/活动示例/节日活动/元宵节.png",
+                        desc: "元宵节活动"
+                    },
+                    {
+                        imageUrl: "images/活动示例/节日活动/愚人节活动.png",
+                        desc: "愚人节活动"
+                    }
+                ]
+            },
+            {
+                title: "3.完结大典",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/完结大典/佣兵的战争.png",
+                        desc: "佣兵的战争活动"
+                    }
+                ]
+            },
+            {
+                title: "4.微信充赠",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/微信冲增/微信充赠.png",
+                        desc: "微信充赠活动"
+                    }
+                ]
+            },
+            {
+                title: "5.小额充赠",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/小额冲增/超级老虎机.png",
+                        desc: "小额冲赠活动"
+                    }
+                ]
+            },
+            {
+                title: "6.新书上架",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/新书上架/还看今朝.png",
+                        desc: "还看今朝新书上架活动"
+                    }
+                ]
+            },
+            {
+                title: "7.阅文开放平台官网",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/阅文开放平台官网/1.png",
+                        desc: "阅文开放平台官网首页"
+                    },
+                    {
+                        imageUrl: "images/活动示例/阅文开放平台官网/2.png",
+                        desc: "阅文开放平台官网说明页"
+                    }
+                ]
+            },
+            {
+                title: "8.IP活动",
+                items: [
+                    {
+                        imageUrl: "images/活动示例/IP活动/凤囚凰.png",
+                        desc: "凤求凰活动"
+                    }
+                ]
+            }
+        ]
+    },
+    interview: {
+        title: "【腾讯】校招面试m站",
+        data: [
+            {
+                title: "M站部分页面",
+                items: [{
+                    imageUrl: "images/interview/1.png",
+                    desc: "侧边栏菜单"
+                },{
+                    imageUrl: "images/interview/2.png",
+                    desc: "简历列表"
+                },{
+                    imageUrl: "images/interview/3.png",
+                    desc: "面试安排"
+                },{
+                    imageUrl: "images/interview/4.png",
+                    desc: "面试已办"
+                },{
+                    imageUrl: "images/interview/5.png",
+                    desc: "简历详情"
+                },{
+                    imageUrl: "images/interview/6.png",
+                    desc: "面试岗位列表"
+                },{
+                    imageUrl: "images/interview/7.png",
+                    desc: "面试岗位分配"
+                },{
+                    imageUrl: "images/interview/8.png",
+                    desc: "加入面试待办"
+                },{
+                    imageUrl: "images/interview/9.png",
+                    desc: "简历发起面试"
+                },{
+                    imageUrl: "images/interview/10.png",
+                    desc: "叫号"
+                },{
+                    imageUrl: "images/interview/11.png",
+                    desc: "叫号成功"
+                },{
+                    imageUrl: "images/interview/12.png",
+                    desc: "简历评价"
+                }]
+            }
+        ]
     }
 };
 
