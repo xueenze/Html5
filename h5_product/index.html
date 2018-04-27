@@ -5,15 +5,39 @@
 <head>
     <title>作品展示</title>
     <link rel="stylesheet" data-ignore="true" href="css/index.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/simpler-sidebar.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
+    <div class="navbar main" id="navbar-main">
+        <div class="load-this">
+            <div id="sidebar-main-trigger" class="icon float-left">
+            <img src="images/icon-menu.png" walt="Menu Icon">
+            </div>
+        </div>
+    </div>
+    <div class="sidebar" id="menu">
+        <div class="sidebar-wrapper" id="sidebar-wrapper">
+            <ul class="nav">
+                <li>
+                    <a href="/index.html?product=noah">NOAH</a>
+                </li>
+                <li>
+                    <a href="/index.html?product=activity">运营活动</a>
+                </li>
+                <li>
+                    <a href="/index.html?product=interview">面试M站</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="container">
     </div>
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery.simpler-sidebar.min.js"></script>
-    <script src="js/index.js"></script>
+    <div class="image-detail">
+        <img src="" alt="">
+    </div>
     <script>
         /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
         (function() {
@@ -36,6 +60,14 @@
             window.addEventListener(resizeEvt, recalc, false);
             recalc();
         })();
+
+        $("#menu").simplerSidebar({
+            opener: '#sidebar-main-trigger',
+            sidebar: {
+                align: 'left',
+                width: 250
+            }
+        });
     </script>
 </body>
 

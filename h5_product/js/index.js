@@ -201,7 +201,7 @@ function getHtml(product) {
         html += '<h2>' + card.title + '</h2>';
         for (j = 0; j < card.items.length; j++) {
             var item = card.items[j];
-            html += '<div class="card"><div class="image"><a href="javascript:;"><img alt="" src="' + item.imageUrl + '"></a></div>';
+            html += '<div class="card"><div class="image"><a class="image-a" href="javascript:;"><img alt="" src="' + item.imageUrl + '"></a></div>';
             html += '<div class="desc">' + item.desc + '</div></div>';
         }
         html += '</div>';
@@ -212,8 +212,19 @@ function getHtml(product) {
 }
 
 $("document").ready(function() {
-    var product = getQueryString("product");
+    $(".image-detail").click(function() {
+        $(this).hide();
+    });
+
+    var product = getQueryString("product") || "noah";
 
     $(".container").empty();
     $(".container").append(getHtml(product));
+
+    $(".image-a").click(function() {
+        var self = $(this);
+        $(".image-detail img").attr("src", self.find("img").attr("src"));
+
+        $(".image-detail").show();
+    });
 });
