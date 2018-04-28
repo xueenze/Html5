@@ -11,22 +11,22 @@ var json = {
         }, {
             title: "2.部分配置",
             items: [{
-                imageUrl: "images/NOAH/2.0/诺亚系统 配置3.png",
+                imageUrl: "images/NOAH/2.0/诺亚系统-配置3.jpg",
                 desc: "系统主列表"
             }, {
-                imageUrl: "images/NOAH/2.0/诺亚系统 配置2.png",
+                imageUrl: "images/NOAH/2.0/诺亚系统-配置2.jpg",
                 desc: "组件配置页面"
             }, {
-                imageUrl: "images/NOAH/2.0/诺亚系统 配置1.png",
+                imageUrl: "images/NOAH/2.0/诺亚系统-配置1.jpg",
                 desc: "组件配置页面"
             }, {
-                imageUrl: "images/NOAH/2.0/看图猜漫画.png",
+                imageUrl: "images/NOAH/2.0/看图猜漫画.jpg",
                 desc: "看图漫画活动实例"
             }, {
-                imageUrl: "images/NOAH/2.0/斗气冲顶大会.png",
+                imageUrl: "images/NOAH/2.0/斗气冲顶大会.jpg",
                 desc: "斗气冲顶大会活动实例"
             }, {
-                imageUrl: "images/NOAH/2.0/话题.png",
+                imageUrl: "images/NOAH/2.0/话题.jpg",
                 desc: "话题活动实例"
             }]
         }, {
@@ -50,11 +50,11 @@ var json = {
                 title: "1.515活动",
                 items: [
                     {
-                        imageUrl: "images/活动示例/515/1.png",
+                        imageUrl: "images/活动示例/515/1.jpg",
                         desc: "515战斗页"
                     },
                     {
-                        imageUrl: "images/活动示例/515/2.png",
+                        imageUrl: "images/活动示例/515/2.jpg",
                         desc: "515排行榜"
                     }
                 ]
@@ -63,15 +63,15 @@ var json = {
                 title: "2.节日活动",
                 items: [
                     {
-                        imageUrl: "images/活动示例/节日活动/万圣夜.png",
+                        imageUrl: "images/活动示例/节日活动/万圣夜.jpg",
                         desc: "万圣节活动"
                     },
                     {
-                        imageUrl: "images/活动示例/节日活动/元宵节.png",
+                        imageUrl: "images/活动示例/节日活动/元宵节.jpg",
                         desc: "元宵节活动"
                     },
                     {
-                        imageUrl: "images/活动示例/节日活动/愚人节活动.png",
+                        imageUrl: "images/活动示例/节日活动/愚人节活动.jpg",
                         desc: "愚人节活动"
                     }
                 ]
@@ -80,7 +80,7 @@ var json = {
                 title: "3.完结大典",
                 items: [
                     {
-                        imageUrl: "images/活动示例/完结大典/佣兵的战争.png",
+                        imageUrl: "images/活动示例/完结大典/佣兵的战争.jpg",
                         desc: "佣兵的战争活动"
                     }
                 ]
@@ -129,7 +129,7 @@ var json = {
                 title: "8.IP活动",
                 items: [
                     {
-                        imageUrl: "images/活动示例/IP活动/凤囚凰.png",
+                        imageUrl: "images/活动示例/IP活动/凤囚凰.jpg",
                         desc: "凤求凰活动"
                     }
                 ]
