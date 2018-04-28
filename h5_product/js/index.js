@@ -142,40 +142,40 @@ var json = {
             {
                 title: "M站部分页面",
                 items: [{
-                    imageUrl: "images/interview/1.png",
+                    imageUrl: "images/Interview/1.png",
                     desc: "侧边栏菜单"
                 },{
-                    imageUrl: "images/interview/2.png",
+                    imageUrl: "images/Interview/2.png",
                     desc: "简历列表"
                 },{
-                    imageUrl: "images/interview/3.png",
+                    imageUrl: "images/Interview/3.png",
                     desc: "面试安排"
                 },{
-                    imageUrl: "images/interview/4.png",
+                    imageUrl: "images/Interview/4.png",
                     desc: "面试已办"
                 },{
-                    imageUrl: "images/interview/5.png",
+                    imageUrl: "images/Interview/5.png",
                     desc: "简历详情"
                 },{
-                    imageUrl: "images/interview/6.png",
+                    imageUrl: "images/Interview/6.png",
                     desc: "面试岗位列表"
                 },{
-                    imageUrl: "images/interview/7.png",
+                    imageUrl: "images/Interview/7.png",
                     desc: "面试岗位分配"
                 },{
-                    imageUrl: "images/interview/8.png",
+                    imageUrl: "images/Interview/8.png",
                     desc: "加入面试待办"
                 },{
-                    imageUrl: "images/interview/9.png",
+                    imageUrl: "images/Interview/9.png",
                     desc: "简历发起面试"
                 },{
-                    imageUrl: "images/interview/10.png",
+                    imageUrl: "images/Interview/10.png",
                     desc: "叫号"
                 },{
-                    imageUrl: "images/interview/11.png",
+                    imageUrl: "images/Interview/11.png",
                     desc: "叫号成功"
                 },{
-                    imageUrl: "images/interview/12.png",
+                    imageUrl: "images/Interview/12.png",
                     desc: "简历评价"
                 }]
             }
