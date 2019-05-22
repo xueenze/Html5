@@ -1,9 +1,12 @@
 body {
     background: #f5f6f7;
     color: #818892;
+    margin: 0;
 }
 
-.container {}
+.container {
+    margin: 1%;
+}
 
 .sidebar-wrapper {
     position: relative;
@@ -56,7 +59,11 @@ body {
     }
 }
 
-.container .list .card .image a {}
+.container .list .card .image a {
+    max-height: 200px;
+    overflow: hidden;
+    display: block;
+}
 
 .container .list .card .image a img {
     display: block;
@@ -68,4 +75,85 @@ body {
     float: left;
     line-height: 0.3rem;
     font-size: 0.3rem;
+}
+
+.image-detail{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background-color: rgba(25,28,34,0.88);
+    text-align: center;
+    color: #4c5161;
+    overflow: auto;
+    z-index: 2;
+    display: none;
+}
+
+.image-detail img{
+    width: 90%;
+    margin: 10% 0;
+}
+
+.sidebar-wrapper {
+    position: relative;
+    height: 100%; overflow: auto;
+}
+#menu {
+    background-color: #1a67b3;
+}
+#menu .nav {
+    margin-top: 0.5rem;
+    line-height: 0.8rem;
+    list-style-type: none;
+    padding-left: 0.4rem;
+}
+#menu .nav a {
+    display: block;
+    padding: 0 0.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.4rem;
+}
+#menu .nav a:hover {
+    background-color: #0883fd;
+}
+[data-simplersidebar='active'] {
+    box-shadow: 3% 0px 3% 0px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.main {
+  padding: 0 0 1% 0;
+  height: 0.8rem;
+  line-height: 0.5rem;
+  background-color: #68aef3;
+  -webkit-box-sizig: border-box
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 1;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+.navbar.main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navbar.main * {
+  display: inline-block;
+  padding-left: 1%;
+}
+
+.navbar.main img {
+  width: 0.4rem;
+}
+
+.navbar.main .icon {
+  padding: 0 1%;
+  cursor: pointer;
 }
