@@ -7,7 +7,7 @@ var xss = require('node-xss').clean;
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.send('resume')
+  res.send('OK');
 });
 
 router.post('/feedback', function(req, res, next) {
@@ -17,26 +17,32 @@ router.post('/feedback', function(req, res, next) {
     var name = data.name;
     var message = data.message;
     var downloadCode = data.downloadcode;
+    var status = 1;
+    var resumeUrl = '';
 
     console.log(`${name} - ${message} - ${downloadCode}`);
 
+    if (downloadCode == config.downloadcode) {
+        status = 2;
+        resumeUrl = 'https://www.baidu.com';
+    }
+
     db.query(`INSERT INTO feedback(name, message, downloadstatus) VALUES (
-        '${name}', '${message}', 1);`, function (err, result){
+        '${name}', '${message}', '${status}');`, function (err, result){
         if(err){
             console.log('[SQL ERROR]:', err.message);
 
-            res.json({
-                data: { code: 0 },
-                msg: '数据插入异常'
-            });
-        } else {
-            res.json({
-                data: {
-                    code: 1,
-                },
-                msg: {}
-            });
+            // 进入LOG
         }
+    });
+
+    // 这里我们一律返回插入成功
+    res.json({
+        data: {
+            code: status,
+            resumeUrl,
+        },
+        msg: {}
     });
 });
 

@@ -133,13 +133,15 @@
 	                chack.removeClass('error');
 					chack.addClass('send');
 					$('#form-chack').fadeOut(8000);
+	            } else if (res.data.code == 2) {
+	            	window.location = res.data.resumeUrl;
 	            } else {
-	            	$('#form-chack').fadeIn(400);
+					$('#form-chack').fadeIn(400);
 	                chack.text(res.msg);
 					chack.removeClass('send');
 					chack.addClass('error');
 					$('#form-chack').fadeOut(8000);
-	            }
+				}
 			},
 		});
 		e.preventDefault();
