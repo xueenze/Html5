@@ -1,2 +1,3 @@
 node_modules/
 h5_cook/.sass-cache/
+**/**/node_modules/

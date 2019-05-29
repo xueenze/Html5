@@ -28,6 +28,7 @@
     
 </head>
 <body>
+	<div id="form-chack"></div>
 
 	<!-- ==== Preloader Section Start ==== -->
 	<div id="preloader">
@@ -387,13 +388,14 @@
 					</ul>
 				</div>
 				<div class="col-md-7 contact-left">
-					<div id="form-chack"></div>
 					<!-- Contact Form -->
-					<form action="mail.php" id="contact-form" method="POST" >
+					<form action="http://localhost:3000/resume/feedback" id="contact-form" method="POST" >
+						<input type="text" name="downloadcode" id="downloadcode" required placeholder="简历下载码">
+
 						<input type="text" name="name" id="name" required placeholder="怎么称呼您">
 
 						<div class="send-btn-div">
-							<textarea id="massage" name="massage" required placeholder="您的消息"></textarea>
+							<textarea id="message" name="message" required placeholder="您的消息"></textarea>
 							<button type="submit" class="send-btn"><i class="fa fa-send"></i></button>
 						</div>
 					</form>

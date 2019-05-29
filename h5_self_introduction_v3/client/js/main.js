@@ -122,34 +122,25 @@
 		var formdata = $(this).serialize();
 		var chack = $('#form-chack');
 
-		function reset_form(){
-		 	$("#name").val('');
-			$("#email").val('');
-			$("#massage").val('');
-		} 
-
 		$.ajax({
 			url:  $(form).attr('action'),
 			type: 'POST',
 			data: formdata,
-			success : function(text){
-	            if (text == "success"){
+			success : function(res){
+	            if (res.data.code == 1){
 	            	$('#form-chack').fadeIn(400);
-	            	reset_form();
-	                chack.text("Your message has been sent :)"); // Message Send Text
+	                chack.text("消息发送成功");
 	                chack.removeClass('error');
 					chack.addClass('send');
 					$('#form-chack').fadeOut(8000);
-
 	            } else {
 	            	$('#form-chack').fadeIn(400);
-	            	reset_form();
-	                chack.text("Oops! something wrong."); // Message Error Text
+	                chack.text(res.msg);
 					chack.removeClass('send');
 					chack.addClass('error');
 					$('#form-chack').fadeOut(8000);
 	            }
-	        }
+			},
 		});
 		e.preventDefault();
 	});

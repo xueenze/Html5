@@ -861,14 +861,17 @@ a.site-button {
   font-weight: 700;
   border-radius: 25px;
   color: #fff;
-  position: absolute;
-  top: -50px;
+  position: fixed;
+  top: 80px;
   height: 35px;
-  min-width: 90px;
+  max-width: 200px;
   text-align: center;
   z-index: 5;
   font-size: 16px;
-  left: 15px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 #form-chack.error {
   background: #d03636;
