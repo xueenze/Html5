@@ -30,7 +30,7 @@ router.post('/feedback', function(req, res, next) {
 
     if (downloadCode == config.downloadcode) {
         status = 2;
-        resumeUrl = '/resume/resume.jpg';
+        resumeUrl = 'https://uniapp-1251340574.cos.ap-shanghai.myqcloud.com/resume.jpg';
     }
 
     db.query(`INSERT INTO feedback(name, message, downloadstatus) VALUES (
