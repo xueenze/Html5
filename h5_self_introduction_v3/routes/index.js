@@ -30,7 +30,7 @@ router.post('/feedback', function(req, res, next) {
 
     if (downloadCode == config.downloadcode) {
         status = 2;
-        resumeUrl = 'https://www.baidu.com';
+        resumeUrl = '/resume/resume.jpg';
     }
 
     db.query(`INSERT INTO feedback(name, message, downloadstatus) VALUES (

@@ -1,3 +1,3 @@
 module.exports = {
-    downloadcode: 'test'
+    downloadcode: 'iamhr'
 };
